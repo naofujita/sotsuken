@@ -29,9 +29,7 @@ body {
     list-style: none;
     font-family: "游ゴシック", "YuGothic", "メイリオ", meiryo, sans-serif;
     font-weight: bold;
-	
-
-    
+	font-size: 0.9rem; 
 }
 #header li a{
     display: block;
@@ -143,7 +141,7 @@ html {
 	width: 30%;
 	font-weight: normal;
 	padding: 1em .5em;
-	background: #3e6291;
+	background: #374257;
 	color: #fff;
 	position: relative;
 	-moz-box-sizing: border-box;
@@ -324,4 +322,11 @@ html {
   .btn input:hover {
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
 	opacity: 0.7;
+  }
+  /*デザインcss↓*/
+  label,
+  input,
+  textarea,
+  select {
+	cursor: pointer;
   }
