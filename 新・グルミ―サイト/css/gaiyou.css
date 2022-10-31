@@ -6,6 +6,7 @@ html {
 body {
   color: #383e45;
   font-size: 0.9rem;
+  margin: 0px;
 }
 a {
   text-decoration: none;
@@ -49,26 +50,35 @@ li {
   display: flex;
   height: 90px;
   background-color: dimgray;
+  box-shadow: 0 0 10px rgba(red, green, blue, alpha);
   border: double 5px ;
   padding-top: 5px;
   box-sizing: border-box;
   justify-content:space-between;
   align-items: center;
   margin:0 auto;
-justify-content: center;
+  margin-left: -500%;
+margin-right: -500%;
+padding-left: 500%;
+padding-right: 500%;
+  position: fixed;
 
+  
 }
 #header ul{
   display: flex;
   padding:01px 0;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
 }
+
 #header li{
   list-style: none;
   font-family: "游ゴシック", "YuGothic", "メイリオ", meiryo, sans-serif;
   font-weight: bold;
-font-size: 0.9rem;
-
-
+  
+  
   
 }
 #header li a{
@@ -76,7 +86,11 @@ font-size: 0.9rem;
   text-decoration: none;
   color: white;
   margin-right: 35px;
-
+  margin-left: 100px;  
+   
+  white-space: nowrap
+  
+ 
   
 }
 #header li a:hover{
@@ -94,6 +108,7 @@ Mainvisual
   height: 600px;
  margin-left: 550px;
  margin-bottom: -80px;
+ 
 }
 
 /*--------------------------------------
@@ -231,6 +246,24 @@ margin-left: 30px;
   font-size: 20px;
   margin-top: 1px;
 }
+
+.kakomi-box2 {
+  margin: 1em auto;
+  padding: 1em;
+  width:  100%;
+  border: 5px double;
+  border-radius: 50px;
+
+ }
+
+ p.kessai2 img {
+  width: 100px;
+  margin-left: 80px;
+  margin-bottom: 35px;
+  margin-top: 35px;
+ }
+
+
 .kakomi-box {
  margin: 2em auto;
  padding: 1em;
@@ -238,3 +271,6 @@ margin-left: 30px;
  border: 5px double;
  border-radius: 50px;
 }
+
+
+
