@@ -19,12 +19,8 @@ $name = $_POST['name'];
 
 //性別
 $name = $_POST['gender'];
-if ($gender == "man"){
-  $gender = "男性";
-}
-else if ($gender == "woman"){
-  $gender="女性"
-}
+
+
 
 //電話番号
 $name = $_POST['tel'];

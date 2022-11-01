@@ -8,26 +8,30 @@
 
 <body>
 
-    <h2>問合せ内容</h2>
+    <h2>お問合せ内容</h2>
 
     <form action="mailto.php" method="post">
 
         <table border="1">
             <tr>
-                <td>問い合わせ内容</td>
-                <td><?php echo $_POST["other"]; ?></td>
+                <td>お問い合わせ内容</td>
+                <td><?php echo $_POST['other']; ?></td>
             </tr>
             <tr>
                 <td>名前</td>
-                <td><?php echo $_POST["name"]; ?></td>
+                <td><?php echo $_POST['name']; ?></td>
+            </tr>
+            <tr>
+                <td>性別</td>
+                <td><?php echo $_POST['gender']; ?></td>
             </tr>
             <tr>
                 <td>電話番号</td>
-                <td><?php echo $_POST["tel"]; ?></td>
+                <td><?php echo $_POST['tel']; ?></td>
             </tr>
             <tr>
                 <td>メールアドレス</td>
-                <td><?php echo $_POST["email"]; ?></td>
+                <td><?php echo $_POST['email']; ?></td>
             </tr>
             
         </table>
@@ -38,3 +42,13 @@
 </body>
 
 </html>
+
+
+
+$name = $_POST['gender'];
+if ($gender == "man"){
+  $gender = "男性";
+}
+else if ($gender == "woman"){
+  $gender = "女性";
+}
