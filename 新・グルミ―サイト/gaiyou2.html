@@ -5,6 +5,8 @@
 
     <meta charset="utf-8">
     <head>  
+      
+     
       <link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-7/css/reset.css">
 <link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-7/css/5-7.css">
         <meta name="viewport" content="width=device-width">
@@ -24,12 +26,32 @@
          </nav>
         </header>
 
+        <html>
+          <head>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/bubbly-bg/1.0.0/bubbly-bg.js"></script>
+          </head>
+          <body>
+              <script>
+                  bubbly({
+                    colorStart: "#fff",
+    colorStop: "#fff",
+    blur: 5,
+    bubbles: 50,
+    compose: "source-over",
+    shadowColor: "#fafad2",
+    radiusFunc: () => Math.random() * 15,
+    bubbleFunc: () => `hsla(0, 0%, 80%, ${Math.random() * 0.25})`,
+    radiusFunc: () => 60
+                
+                    });
+              </script>
+          </body>
+      </html>
+      
+
 
         <body>
-          <div class="container">
-            </div>
-          </div>
-          <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+          <canvas id="canvas"></canvas>
           <script type="text/javascript" src="js/gaiyou.js"></script>
         </body>
 
