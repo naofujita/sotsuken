@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------
+背景
+--------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+body {
+  font-family: 'Merienda', cursive;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-bottom: 10px;
+}
+.box {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+a {
+  color: #0bd;
+}
+/*--------------------------------------------------
+ヘッダー
+--------------------------------------------------*/
+/*--------------------------------------------------
+ヘッダー  auto 100px auto
+--------------------------------------------------*/
+#header{
+    display: flex;
+    height: 90px;
+    background-color: dimgray;
+    border: double 5px ;
+    padding-top: 5px;
+    box-sizing: border-box;
+    justify-content:space-between;
+    align-items: center;
+    margin:0 auto;
+	justify-content: center;
+
+}
+#header ul{
+    display: flex;
+    padding:01px 0;
+}
+#header li{
+    list-style: none;
+    font-family: "游ゴシック", "YuGothic", "メイリオ", meiryo, sans-serif;
+    font-weight: bold;
+	font-size: 0.9rem; 
+}
+#header li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-right: 35px;
+
+    
+}
+#header li a:hover{
+    opacity: 0.7;
+}
+.gourmmy{
+	font-family: Gourmmy;
+	text-align: left;
+	float: left;
+	margin-right: 81px;
+}
+
+
+
+
+div.center {
+    text-align: center; 
+}
+img{
+    background:white;
+    vertical-align: bottom;
+    width: 800px;
+    height: 600px;
+  }
+  div{
+
+    margin-bottom:10px;
+  }
+  *{
+    margin:0;padding:0;
+  }
+
+
+  .section-title {
+    background: #ffff99;
+    padding: 0.8em;
+    color: rgb(122, 76, 33);
+    border-radius: 0.5em;
+    width: 700px;
+ margin: 0 auto;
+    text-align: center;
+
+  
+  }
+
+  h2{
+    text-align: center;
+    margin-bottom: 15px;
+  }
+h2.h{
+    text-align: center;
+    margin-bottom: 20px;
+}
+  .box{
+    box-sizing: border-box;
+     /*コレ*/width: 56%;
+    /*コレ*/max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff4ea;
+    box-shadow: 0 0 0 8px #fff4ea;
+    border: 2px dashed #ffbf7f;
+    border-radius: 100px;
+    color: #000000;
+    margin-bottom: 80px;
+    text-align: center;
+    margin-top: 110px;
+    padding: 24px;
+  }
+
+  p.sample img {
+    display: flex;
+    width: 150px;
+    height: auto;
+    margin-bottom: 50px;
+    margin: 0 auto;
+    
+
+    }
+
+    .teki{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .circle4 {
+        
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        background: #ff9933;
+        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+        margin-right: 20px;
+
+        
+      }
+      .circle4 > .circle-txt1 {
+        display: block;
+        width: 100%;
+        font-size: 50px;
+        color: #ffff99;
+        line-height: 2;
+      }
+      .circle4 > .circle-txt2 {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        margin-top: 1px;
+        align-items: center;
+      }
+      div.maru{
+        text-align: center;
+      }
+      
+
+      .kakomi-box2 {
+        margin: 1em auto;
+        padding: 1em;
+        width:  50%;
+        border: 5px double;
+        border-radius: 50px;
+      
+       }
+      
+       p.kessai2 img {
+        width: 100px;
+        height: 100px;
+        margin-left: 80px;
+        margin-bottom: 35px;
+        margin-top: 35px;
+       }
+
+       .kakomi-box {
+        margin: 1em auto;
+        padding: 1em;
+        width:  50%;
+        border: 5px double;
+        border-radius: 50px;
+      
+       }
+      
+       p.kessai img {
+        width: 150px;
+        height: 150px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-right: 0px;
+        padding-left: 10px;
+        
+       }
