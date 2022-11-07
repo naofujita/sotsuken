@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <title>お問い合せ</title>
 <link href="css/toiawase.css" rel="stylesheet" type="text/css">
+<script lang="javascript">
+    
+</script>
+</head>
 <body>
     
     <header id="header" class="wrapper">
@@ -34,8 +38,8 @@
         <th>お問い合わせの種類<span>必須</span></th>
         <td>
              <div class="box_br">
-                 <label>
-                   <input type="radio" name="gender" value="テキスト1">
+                <label>
+                    <input type="radio" name="gender" value="テキスト1">
                    注文について
                 </label>
             </div>
@@ -54,13 +58,15 @@
                             <input type="radio" name="gender" value="テキスト2">
                             その他
                         </label>
+                    </div>
+                </div>
             </div>
         </td>
-      </tr>
-      <tr>
+    </tr>
+    <tr>
         <th>お問い合わせ内容 <span>必須</span><br /></th>
         <td><textarea name="お問い合わせ内容" cols="50" rows="5" ></textarea> </td>
-      </tr>
+    </tr>
       <!--」<tr>
         <th>ご用件</th>
         <td><select name="ご用件">
@@ -69,24 +75,24 @@
             <option value="リンクについて">リンクについて</option>
           </select></td>
       </tr>「-->
-      <tr>
+    <tr>
         <th>お名前<span>必須</span></th>
         <td><input size="20" type="text" class="wide" name="fullname"  placeholder="斎藤　ぐるみ"/></td>
-      </tr>
-      <tr>
+    </tr>
+    <tr>
         <th>電話番号（半角）</th>
         <td><input size="30" type="text" class="wide" name="tel" /></td>
-      </tr>
-      <tr>
+    </tr>
+    <tr>
         <th>Mail（半角）<span>必須</span></th>
         <td><input size="30" type="text" class="wide" name="email" placeholder="gourmmy@harapeko.com" /></td>
-      </tr>
-      
+    </tr>  
     </table>
     <div class="con_pri">
         <div class="box_pri">
             <div class="box_tori">
-                <h4>プライバシー</h4>当サイトの運営に際し、お客様のプライバシーを尊重し個人情報に対して十分な配慮を行うとともに、大切に保護し、適正な管理を行うことに努めております。
+                <h4>プライバシー</h4>
+                <p class="txt">当サイトの運営に際し、お客様のプライバシーを尊重し個人情報に対して十分な配慮を行うとともに、大切に保護し、適正な管理を行うことに努めております。
             </p>
             </div>
             <div class="box_num">
@@ -111,9 +117,12 @@
         </label>
     </div>
     <p class="btn">
-        <span><input type="submit" value="　 確認 　" /></span>
+        <span><input type="submit" value="　 確認 　" disabled/></span>
     </p>
   </form>
 </div>
-
+<footer id="footer">
+    <p>&copy; 2023 Gourmmy</p>
+    </footer>
 </body>
+</html>
