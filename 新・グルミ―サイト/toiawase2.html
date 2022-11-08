@@ -31,10 +31,39 @@
 <div class="box_con02">
     <form  action="php/index.php" method="post">
     <table class="formTable">
-    
+     
+      <tr>
+        <th>お問い合わせの種類<span>必須</span></th>
+        <td>
+             <div class="box_br">
+                <label>
+                    <input type="radio" name="contact" value="テキスト1">
+                   注文について
+                </label>
+            </div>
+            <div class="box_br">
+                <label>
+                    <input type="radio" name="gender" value="テキスト2">
+                    配達について
+                </label>
+                <div class="box_br">
+                    <label>
+                        <input type="radio" name="gender" value="テキスト2">
+                        決済について
+                    </label>
+                    <div class="box_br">
+                        <label>
+                            <input type="radio" name="gender" value="テキスト2">
+                            その他
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
       <tr>
         <th>お問い合わせ内容 <span>必須</span><br /></th>
-        <td><textarea name="other" cols="50" rows="5" required></textarea> </td>
+        <td><textarea name="other" cols="50" rows="5" placeholder="メッセージを記入してください。" required/> </textarea>  </td>
       </tr>
       <!--」<tr>
         <th>ご用件</th>
@@ -44,9 +73,10 @@
             <option value="リンクについて">リンクについて</option>
           </select></td>
       </tr>「-->
+      
       <tr>
         <th>お名前<span>必須</span></th>
-        <td><input size="20" type="text" class="wide" name="name"  placeholder="斎藤　ぐるみ" required/></td>
+        <td><input size="20" type="text" class="wide" name="name"  placeholder="例）斎藤　ぐるみ" required/></td>
       </tr>
       <tr>
         <th>性別<span>必須</span></th>
@@ -65,11 +95,11 @@
       </tr>
       <tr>
         <th>電話番号（半角）</th>
-        <td><input size="30" type="text" class="wide" name="tel" /></td>
+        <td><input size="30" type="text" class="wide" name="tel" placeholder="例）090-1234-5678"> </td>
       </tr>
       <tr>
         <th>Mail（半角）<span>必須</span></th>
-        <td><input size="30" type="text" class="wide" name="email" placeholder="gourmmy@harapeko.com" required /></td>
+        <td><input size="30" type="text" class="wide" name="email" placeholder="例）gourmmy@harapeko.com" required /></td>
       </tr>
       
     </table>
