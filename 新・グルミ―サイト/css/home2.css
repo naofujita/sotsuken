@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+body {
+  background-image: url("");
+  background-repeat:  no-repeat;
+  background-size: cover;      
+}
+
+
+/* 見出し画像 */
+.fadeIn{
+    animation-name:fadeInAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    width: 65%;
+  
+
+    }
+
+
+    p.img_center{
+ 
+    padding-top: 0;
+    text-align: center;
+    
+
+
+    }
+
+    @keyframes fadeInAnime{
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+
+
+
+/* 背景画像にグラデオーバーレイ 
+.colorchangeimg_bg {
+    height: 250px;
+    margin: 30px 0;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.705) 0%, rgba(255, 255, 255, 0.699) 100%),
+    url(https://i.pinimg.com/originals/b7/53/80/b75380798fbf2a188fd650e26dc231ff.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+  }
+  .colorchangeimg_bg{
+    content: '';
+    display: block;
+    padding-top: 50%;
+    background-repeat: repeat;
+  }
+
+*/
+
+/*--------------------------------------------------
+ヘッダー
+--------------------------------------------------*/
+/*--------------------------------------------------
+ヘッダー  auto 100px auto
+--------------------------------------------------*/
+#header{
+    display: flex;
+    height: 90px;
+    background-color: dimgray;
+    border: double 5px ;
+    padding-top: 5px;
+    box-sizing: border-box;
+    justify-content:space-between;
+    align-items: center;
+    margin:0 auto;
+	justify-content: center;
+  
+  
+
+}
+#header ul{
+    display: flex;
+    padding:01px 0;
+}
+#header li{
+    list-style: none;
+    font-family: "游ゴシック", "YuGothic", "メイリオ", meiryo, sans-serif;
+    font-weight: bold;
+	font-size: 0.9rem; 
+}
+#header li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-right: 35px;
+
+    
+}
+#header li a:hover{
+    opacity: 0.7;
+    
+}
+.gourmmy{
+	font-family: Gourmmy;
+	text-align: left;
+	float: left;
+	margin-right: 81px;
+}
+
+
+.imgzya img{
+ width: 170px;
+  padding: 20px;
+  margin: 0 auto;
+}
+.imgzya{
+  text-align: center;
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+
+#kate{
+  
+  padding: 0.5rem 0rem;
+  margin-bottom: 0.2rem;
+  border-bottom: 2px solid #000000;
+  font-weight: bold;
+  font-size: 43px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+
+
+
+
+.centerImg {
+  font-size:0;
+  margin-bottom:15px;
+  text-align:center;
+  }
+  .centerImg > * {
+  width:49%;
+  margin-bottom:15px;
+  margin-left:2%;
+  display:inline-block;
+  font-size:12px;
+  }
+  .centerImg > *:nth-child(2n + 1) {
+  margin-left:0;
+  }
+  .centerImg img {
+  max-width:80%;
+  }
