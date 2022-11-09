@@ -1,5 +1,22 @@
 @charset "UTF-8";
 
+
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+body {
+  font-family: 'Merienda', cursive;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+
+
 body {
   background-image: url("");
   background-repeat:  no-repeat;
@@ -126,16 +143,75 @@ body {
 }
 
 
+.ribbon1 {
+  display: inline-block;
+  position: relative;
+  height: 50px;/*リボンの高さ*/
+  line-height: 50px;/*リボンの高さ*/
+  text-align: center;
+  padding: 0 200px;/*横の大きさ*/
+  font-size: 18px;/*文字の大きさ*/
+  background: #f57a78;/*塗りつぶし色*/
+  color: #FFF;/*文字色*/
+  font-size: 20px;
+  box-sizing: border-box;
+  margin-left: 400px;
+}
 
-#kate{
-  
-  padding: 0.5rem 0rem;
-  margin-bottom: 0.2rem;
-  border-bottom: 2px solid #000000;
-  font-weight: bold;
-  font-size: 43px;
-  width: 400px;
-  margin: 0 auto;
+
+.ribbon1:before, .ribbon1:after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.ribbon1:before {
+  top: 0;
+  left: 0;
+  border-width: 25px 0px 25px 15px;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+}
+
+.ribbon1:after {
+  top: 0;
+  right: 0;
+  border-width: 25px 15px 25px 0px;
+  border-color: transparent rgb(252, 251, 230) transparent transparent;
+  border-style: solid;
+}
+
+
+
+
+
+
+
+#kate h3{
+  font-size: 3.4rem;
+  font-style: italic;
+  letter-spacing: .1em;
+  color: rgb(235, 152, 57);
+  text-shadow: -3px 2px 0 #000;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+
+div.box{
+  background: rgba(255, 255, 255, 0.753);
+border-radius: 16px;
+padding-top: 80px;
+padding-bottom: 10px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.3px);
+-webkit-backdrop-filter: blur(5.3px);
+border: 1px solid rgba(255, 255, 255, 0.29);
+width: 80%;
+margin: 0 auto;
+margin-bottom: 60px;
 }
 
 
@@ -149,14 +225,49 @@ body {
   }
   .centerImg > * {
   width:49%;
-  margin-bottom:15px;
+  margin-bottom:100px;
   margin-left:2%;
   display:inline-block;
-  font-size:12px;
+  font-size:25px;
   }
   .centerImg > *:nth-child(2n + 1) {
   margin-left:0;
   }
   .centerImg img {
-  max-width:80%;
+  max-width:63%;
   }
+
+
+
+  /*--------------------------------------------------
+footer
+--------------------------------------------------*/
+#footer{
+  font-size:1rem;
+  padding:20px 0;
+  text-align: center;
+  background: #383e45;
+  color: #fff;
+}
+#footer-info-ph{
+  width: 31.9148%;
+}
+#footer-info-data{
+  width: 65.9574%;
+}
+#footer-info-list{
+  font-size: 50px;
+}
+
+.guru img{
+  width: 250px;
+
+}
+.guru{
+  text-align: left;
+  margin-left: 80px;
+}
+
+
+
+
