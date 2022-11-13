@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="index.html">HOME</a></li>
 				<li><a href="gaiyou.html">Gourmmyについて</a></li>
-                <li><a href="toiawase.html">問い合わせ</a></li>
+                <li><a href="toiawase2.html">問い合わせ</a></li>
 				<li><a href="login.html">サインイン</a></li>
            </ul>
          </nav>
@@ -25,10 +25,9 @@
 <br>
 
 <h1 class="midasi">お問い合せ</h1>
-<p style="text-align : center ; font-size: 2rem; margin-top: 30px; ;">＜お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。＞</p>
 <br>
 <br>
-        
+
 <div class="box_con02">
     <form  action="php/index.php" method="post">
     <table class="formTable">
@@ -36,29 +35,25 @@
       <tr>
         <th>お問い合わせの種類<span>必須</span></th>
         <td>
-          <!-- 
-            4つのラジオボタンのname属性がバラバラなのを修正した
-            valueを数字にして次のページで配列を定義して直接中身を持ってこれるようにした
-          -->
              <div class="box_br">
                 <label>
-                    <input type="radio" name="enquiry" value="0">
+                    <input type="radio" name="contact" value="テキスト1">
                    注文について
                 </label>
             </div>
             <div class="box_br">
                 <label>
-                    <input type="radio" name="enquiry" value="1">
+                    <input type="radio" name="contact" value="テキスト2">
                     配達について
                 </label>
                 <div class="box_br">
                     <label>
-                        <input type="radio" name="enquiry" value="2">
+                        <input type="radio" name="contact" value="テキスト2">
                         決済について
                     </label>
                     <div class="box_br">
                         <label>
-                            <input type="radio" name="enquiry" value="3">
+                            <input type="radio" name="contact" value="テキスト2">
                             その他
                         </label>
                     </div>
@@ -68,7 +63,7 @@
     </tr>
       <tr>
         <th>お問い合わせ内容 <span>必須</span><br /></th>
-        <td><textarea name="comment" type="text" cols="50" rows="5" placeholder="メッセージを記入してください。" required> </textarea>  </td>
+        <td><textarea name="comment" cols="50" rows="5" placeholder="メッセージを記入してください。" required/> </textarea>  </td>
       </tr>
       <!--」<tr>
         <th>ご用件</th>
@@ -93,14 +88,14 @@
             </div>
             <div class="box_br">
                 <label>
-                    <input type="radio" name="gender" value="weman" required> 女性
+                    <input type="radio" name="gender" value="woman" required> 女性
                  </label>
             </div>
         </td>
       </tr>
       <tr>
         <th>電話番号（半角）</th>
-        <td><input size="30" type="text" class="wide" name="tel" placeholder="例）09012345678"> </td>
+        <td><input size="30" type="text" class="wide" name="tel" placeholder="例）090-1234-5678"> </td>
       </tr>
       <tr>
         <th>Mail（半角）<span>必須</span></th>
@@ -133,11 +128,11 @@
     </div>
     <div class="box_check">
         <label>
-            <input type="checkbox" style="transform: scale(2.0);" name="acceptance-714" value="1" aria-invalid="false" class="agree" id="agree" onclick="getUserAccept()"><span class="check">プライバシーポリシーに同意する</span>
+            <input type="checkbox" name="acceptance-714" value="1" aria-invalid="false" class="agree" id="agree" onclick="getUserAccept()"><span class="check">プライバシーポリシーに同意する</span>
         </label>
     </div>
-    <p class="btn" style="margin-bottom: 20%;    font-size: 2rem;   transform: scale(1.5)">
-        <span><a href="php/index.php"></a><input type="submit" value="確認画面へ" disabled id="subm" /></span>
+    <p class="btn">
+        <span><a href="php/index.php"></a><input type="submit" value="確認" disabled id="subm" /></span>
     </p>
   </form>
 </div>
