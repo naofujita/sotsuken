@@ -3,9 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Merienda');
 
-body {
-  font-family: 'Merienda', cursive;
-}
+
 .container {
   display: flex;
   justify-content: center;
@@ -37,7 +35,6 @@ body {
 
 
     p.img_center{
- 
     padding-top: 0;
     text-align: center;
     
@@ -143,49 +140,34 @@ body {
 }
 
 
-.ribbon1 {
-  display: inline-block;
-  position: relative;
-  height: 50px;/*リボンの高さ*/
-  line-height: 50px;/*リボンの高さ*/
-  text-align: center;
-  padding: 0 200px;/*横の大きさ*/
-  font-size: 18px;/*文字の大きさ*/
-  background: #f57a78;/*塗りつぶし色*/
-  color: #FFF;/*文字色*/
-  font-size: 20px;
-  box-sizing: border-box;
-  margin-left: 400px;
+.double{
+	width:100%;
+	text-align:center;
 }
-
-
-.ribbon1:before, .ribbon1:after {
-  position: absolute;
-  content: '';
-  width: 0px;
-  height: 0px;
-  z-index: 1;
+.double h2{
+	position:relative;
+	display:inline-block;
+  font-size:4em;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	color: rgb(121, 150, 110);
+	text-shadow: 0.02em 0.02em 0.02em rgb(95, 33, 4);
+  
 }
-
-.ribbon1:before {
-  top: 0;
-  left: 0;
-  border-width: 25px 0px 25px 15px;
-  border-color: transparent transparent transparent #fff;
-  border-style: solid;
+.double h2:before, .double h2:after{
+	content:"";
+	display:block;
+	width:230px;
+	height:4px;
+	border-top:1px solid #111;
+	border-bottom:1px solid #111;
+	position:absolute;
+	top:50%;
+	margin-top:-2px;
 }
-
-.ribbon1:after {
-  top: 0;
-  right: 0;
-  border-width: 25px 15px 25px 0px;
-  border-color: transparent rgb(252, 251, 230) transparent transparent;
-  border-style: solid;
-}
-
-
-
-
+.double h2:before{left:-224px;}
+.double h2:after{right:-224px;}
 
 
 
@@ -242,32 +224,83 @@ margin-bottom: 60px;
   /*--------------------------------------------------
 footer
 --------------------------------------------------*/
-#footer{
-  font-size:1rem;
-  padding:20px 0;
+.footer04 {
+  color: #808080;
+  background: linear-gradient(270deg,  rgba(30, 34, 34, 0.589) 100%, rgba(30, 34, 34, 0.589) 100%),
+  url(https://richfieldsplastics.com/wp-content/uploads/2020/01/Plastic-Utensils-and-Kitchenware-768x512.jpg);
+  background-size: cover;
+  background-position: center;
   text-align: center;
-  background: #383e45;
-  color: #fff;
-}
-#footer-info-ph{
-  width: 31.9148%;
-}
-#footer-info-data{
-  width: 65.9574%;
-}
-#footer-info-list{
-  font-size: 50px;
-}
+  padding: 30px;
+ }
+ .footer04 a {
+  color: #ffffff;
+  text-decoration: none;
+  
+ }
+ .footer04 a:hover {
+  text-decoration: underline;
+ }
+ .footer04 .menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ .footer04 .menu li {
+  margin: 0;
+  padding: 0 20px;
 
-.guru img{
-  width: 250px;
-
+   /*コレ*/display: flex;
+    /*コレ*/align-items: center;
+  
+ }
+ .footer04 .menu li:last-child {
+  border: none;
+ }
+ .footer04 .copyright {
+  margin: 0;
+  padding: 20px 0 0 0;
+ }
+ 
+ @media only screen and (max-width: 599px) {
+ .footer04 .menu {
+  justify-content: flex-start;
+ }
+ .footer04 .menu li {
+  width: 50%;
+  box-sizing: border-box;
+  border: none;
+ }
+ .footer04 .menu li:nth-child(odd) {
+  border-right: 1px #ffffff solid;
+ }
+ }
+ #footer-info-ph{
+  width: 10px;
 }
-.guru{
-  text-align: left;
+#tizu {
   margin-left: 80px;
+  margin-top: 30px;
+
+}
+#zyusyo {
+  color: #ffffff;
+  text-align: left;
 }
 
+.footer04 .copyright{
+  color: #ffffff;
+}
 
-
-
+#rogo img{
+  width: 350px;
+    /*コレ*/display: flex;
+    /*コレ*/align-items: center;
+  
+}
+#rpgo{
+  padding-right: 0;
+}

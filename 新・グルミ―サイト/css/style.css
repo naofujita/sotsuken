@@ -1,10 +1,15 @@
 @charset "UTF-8";
 
+
+
+
+
+
 html{
     font-size: 100%;
 }
 body{
-    color:#a50052;
+    color:#000000;
     font-size: 0.9rem;
 }
 a{
@@ -41,8 +46,8 @@ li{
     margin:10px 0;
 }
 .wrapper{
-    max-width:960px;
-    margin:0 auto 100px auto;
+    max-width:100%;
+    margin:0 auto;
     padding:0 4%;
     text-align:center;
 }
@@ -55,12 +60,14 @@ li{
     height: 90px;
     background-color: dimgray;
     border: double 5px ;
-    padding-top: 5px;
+    padding-top: 0px;
     box-sizing: border-box;
     justify-content:space-between;
     align-items: center;
-    margin:0 auto;
+    margin:0;
 	justify-content: center;
+    
+ 
 
 }
 #header ul{
@@ -91,13 +98,11 @@ li{
 	margin-right: 81px;
 }
 
-.midasi {
-	font-family: お問い合わせ;
-	font-size: 50px;
-	text-align: center;
-
-	}
-
+#mew {
+   margin: 0;
+   padding: 40px;
+   text-align: left;
+}
 
 /*--------------------------------------------------
 Minvisual
@@ -130,34 +135,19 @@ About
     text-align: center;
 }
 #about{
-  margin: 2em 0;
   background-color: #fff4ea;
   box-shadow: 0 0 0 8px #fff4ea;
   border: 2px dashed #ffbf7f;
   border-radius: 100px;
   color: #000000;
   margin-bottom: 80px;
+  width: 50%;
   text-align: center;
+    margin-bottom: 80px;
 }
-#about.circle4 {
-  display: inline-block;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  background: #ff9933;
-  border-radius: 50%;
-  width: 180px;
-  height: 180px;
-  color: #fff;
-  font-size: 20px;
-  text-align: center;
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
-  margin-bottom: 80px;
-  margin-left: 30px;
-  margin-top: 20px;
 
   
-}
+
 #about.circle4 > .circle-txt1 {
   display: block;
   width: 100%;
@@ -186,10 +176,30 @@ Menu
 #bicycle ul{
     display:flex;
     justify-content:space-between;
+    width: 65%;
+    margin: 0 auto;
 }
 #bicycle li{
     width:32%;
+   
 }
+
+
+div.box{
+    background: rgba(255, 255, 255, 0.753);
+  padding-top: 80px;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+  border: 1px solid rgba(255, 255, 255, 0.29);
+  width: 70%;
+  margin: 0 auto;
+    padding-bottom: 90px;
+  }
+
+
+
 
 /*--------------------------------------------------
 footer
