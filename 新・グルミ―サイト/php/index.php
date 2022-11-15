@@ -1,3 +1,34 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>内容確認</title>
+<link href="css/toiawase.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <header id="header" class="wrapper">
+        <h3 class="gourmmy">Gourmmy</h3>
+          <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+				<li><a href="gaiyou.html">Gourmmyについて</a></li>
+                <li><a href="toiawase2.html">問い合わせ</a></li>
+				<li><a href="login.html">サインイン</a></li>
+           </ul>
+         </nav>
+        </header>
+        
+
+<br>
+<br>
+<br>
+
+<h1 class="midasi">内容確認</h1>
+<p style="text-align : center ; font-size: 2rem; margin-top: 30px; ;">＜お問い合わせ内容をご確認の上、「送信」ボタンをクリックしてください。＞</p>
+<br>
+<br>
+
 <?php
 
 // セッションの開始
@@ -56,10 +87,7 @@ $_SESSION['email'] = $email;
 </head>
 
 <body>
-    
-    <h2><span>内容確認</span></h2>
-    <br>
-    
+    <div class="box_con02">
     <form action="post.php" method="post">
     <table class="formTable">
     
@@ -75,9 +103,10 @@ $_SESSION['email'] = $email;
     </table>
     <br><br>
         
-        <div class="btn">
+        <div class="btn" style="margin-bottom: 20%;    font-size: 2rem;   transform: scale(1.5)">
         <input type="button" value="内容を修正する" onclick="history.back(-1)">
         <input type="submit" value="送信する"></div>
 </form>
+</div>
 </body>
 </html>
