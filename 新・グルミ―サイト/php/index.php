@@ -105,7 +105,7 @@ $_SESSION['email'] = $email;
         
         <div class="btn" style="margin-bottom: 20%;    font-size: 2rem;   transform: scale(1.5)">
         <input type="button" value="内容を修正する" onclick="history.back(-1)">
-        <input type="submit" value="送信する"></div>
+        <input type="submit" value="送信"></div>
 </form>
 </div>
 </body>
