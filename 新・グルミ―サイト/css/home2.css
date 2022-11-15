@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-@import url('https://fonts.googleapis.com/css?family=Merienda');
+
 
 
 .container {
@@ -80,6 +80,7 @@ body {
 ヘッダー  auto 100px auto
 --------------------------------------------------*/
 #header{
+  position: fixed; /*ポジションを固定する*/
     display: flex;
     height: 90px;
     background-color: dimgray;
@@ -90,10 +91,12 @@ body {
     align-items: center;
     margin:0 auto;
 	justify-content: center;
-  
+  z-index: +1;
+  width: 100%;
+}
   
 
-}
+ 
 #header ul{
     display: flex;
     padding:01px 0;
@@ -304,3 +307,6 @@ footer
 #rpgo{
   padding-right: 0;
 }
+
+
+
