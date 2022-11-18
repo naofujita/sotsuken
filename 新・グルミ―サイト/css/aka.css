@@ -18,13 +18,13 @@
 	font-family: 会員登録;
 	font-size: 50px;
 	text-align: center;
+  padding-top: 150px;
 }
 
 h1 {
   position: relative;
   color: #554629;
-  line-height: 1.4;
-  -webkit-box-reflect: below -10px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0) 10%,rgba(0, 0, 0, 0.6));
+  
 }
 
 
@@ -48,6 +48,7 @@ address,caption,cite,code,dfn,em,strong,th,var {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  
 }
 caption,th {
   text-align: left;
@@ -86,6 +87,7 @@ i {
 .box_con {
   max-width: 900px;
   margin: 0  auto;
+  
 }
 @media only screen and (max-width: 768px) {
   .box_con {
@@ -94,13 +96,17 @@ i {
 }
 .box_con form {
   width: 100%;
+  
 }
 .box_con form table {
   width: 100%;
+  
 }
 .box_con form table tr {
   position: relative;
+  
 }
+/*点線*/
 .box_con form table tr:after {
   content: "";
   position: absolute;
@@ -108,8 +114,9 @@ i {
   left: 0;
   bottom: 0;
   height: 1px;
-  border-bottom: dotted #cdcdcd 1px;
+  border-bottom: dotted #ffffff 1px;
 }
+/*お名前とか↓*/
 .box_con form table tr th {
   width: 30%;
   font-weight: normal;
@@ -117,7 +124,12 @@ i {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  background: #e49e61;
 }
+.box_con p{
+  color: #030101;
+}
+/*画面小↓*/
 @media only screen and (max-width: 768px) {
   .box_con form table tr th {
     text-align: center;
@@ -128,12 +140,15 @@ i {
     color: #fff;
   }
 }
-
+/*入力テーブル*/
 .box_con form table tr td {
   padding: 1em .5em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  background: #ffffffce;
+  caret-color: #ec922b;
+  border: 2px solid rgb(189, 189, 189);
 }
 @media only screen and (max-width: 768px) {
   .box_con form table tr td {
@@ -144,6 +159,7 @@ i {
 }
 .box_con form table tr .box_br {
   display: block;
+  
 }
 .box_con form table tr select {
   border: 1px solid #97ae88;
@@ -198,117 +214,55 @@ i {
 }
 .box_con form table tr textarea {
   height: 10em;
+  
 }
 
+/*--------------------------------------------------
+ヘッダー
+--------------------------------------------------*/
+#header{
+  position: fixed; /*ポジションを固定する*/
+    display: flex;
+    height: 90px;
+    background-color: dimgray;
+    border: double 5px ;
+    padding-top: 5px;
+    box-sizing: border-box;
+    justify-content:space-between;
+    align-items: center;
+    margin:0 auto;
+	justify-content: center;
+  z-index: +1;
+  width: 100%;
+}
+  
 
-/*プライバシーのデザインcss↓*/
-.con_pri {
-  max-width: 700px;
-  margin: 0  auto;
+ 
+#header ul{
+    display: flex;
+    padding:01px 0;
 }
-@media only screen and (max-width: 768px) {
-  .con_pri {
-    width: 95%;
-  }
+#header li{
+    list-style: none;
+    font-family: "游ゴシック", "YuGothic", "メイリオ", meiryo, sans-serif;
+    font-weight: bold;
+	font-size: 0.9rem; 
 }
-.con_pri .box_pri {
-  height: 300px;
-  overflow-y: scroll;
-  border: 1px solid #cdcdcd;
-  background: #f7f7f7;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-top: 20px;
-  padding: 20px 55px;
-}
-@media only screen and (max-width: 768px) {
-  .con_pri .box_pri {
-    margin-top: 4%;
-    padding: 3%;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .con_pri .box_pri {
-    padding: 4%;
-  }
-}
-.con_pri .box_pri .box_tori {
-  text-align: left;
-  margin-top: 40px;
-}
-@media only screen and (max-width: 768px) {
-  .con_pri .box_pri .box_tori {
-    margin-top: 4%;
-  }
-}
-.con_pri .box_pri .box_tori h4 {
-  font-weight: normal;
-  margin-bottom: 30px;
-  font-size: 150%;
-}
-@media only screen and (max-width: 768px) {
-  .con_pri .box_pri .box_tori h4 {
-    margin-bottom: 4%;
-  }
-}
-.con_pri .box_pri .box_tori .txt {
-  padding: 0 20px;
-}
-@media only screen and (max-width: 768px) {
-  .con_pri .box_pri .box_tori .txt {
-    padding: 0;
-  }
-}
-.con_pri .box_pri .box_num {
-  margin-top: 30px;
-}
-@media only screen and (max-width: 768px) {
-  .con_pri .box_pri .box_num {
-    margin-top: 5%;
-  }
-}
-.con_pri .box_pri .box_num h4 {
-  font-weight: normal;
-  font-size: 113%;
-}
-.con_pri .box_pri .box_num .txt {
-  padding: 10px 0 0 20px;
-}
-@media only screen and (max-width: 768px) {
-  .con_pri .box_pri .box_num .txt {
-    padding: 3% 0 0 3%;
-  }
-}
+#header li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-right: 35px;
 
-.box_check {
-  text-align: center;
-  margin: 1em auto;
+    
 }
-.box_check label {
-  display: inline-block;
+#header li a:hover{
+    opacity: 0.7;
+    
 }
-.box_check label span {
-  margin-left: .3em;
-}
-
-.btn {
-  text-align: center;
-}
-.btn input {
-  display: inline-block;
-  background: #eee;
-  padding: .5em 4em;
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  -moz-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-.btn input:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
+.gourmmy{
+	font-family: Gourmmy;
+	text-align: left;
+	float: left;
+	margin-right: 81px;
 }

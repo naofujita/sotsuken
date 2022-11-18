@@ -108,6 +108,7 @@ html {
   .box_con02 {
 	max-width: 900px;
 	margin: 0  auto;
+	background: #ffffff;
   }
   @media only screen and (max-width: 768px) {
 	.box_con02 {
@@ -141,7 +142,7 @@ html {
 	width: 30%;
 	font-weight: normal;
 	padding: 1em .5em;
-	background: #374257;
+	background: #667380;
 	color: #fff;
 	position: relative;
 	-moz-box-sizing: border-box;
@@ -157,7 +158,7 @@ html {
 	}
   }
   .box_con02 form table tr th span {
-	background: #cd6f55;
+	background: #ee827c;
 	padding: 0 .3em;
 	color: #fff;
 	margin-left: .5em;
