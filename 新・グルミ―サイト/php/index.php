@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>内容確認</title>
 <link href="css/toiawase.css" rel="stylesheet" type="text/css">
 </head>
@@ -35,9 +36,8 @@
 session_start();
 $genderList = ["男","女"];
 $contactList = ["注文について","配達について","決済について","その他"];
-
-$contact = htmlspecialchars($_POST['enquiry'], ENT_QUOTES, 'UTF-8');
-$comment = htmlspecialchars($_POST['comment'], ENT_QUOTES, 'UTF-8');
+$contact = htmlspecialchars($_POST['enquiry_type'], ENT_QUOTES, 'UTF-8');
+$comment = htmlspecialchars($_POST['enquiry'], ENT_QUOTES, 'UTF-8');
 $name = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
 $gender = htmlspecialchars($_POST['gender'], ENT_QUOTES, 'UTF-8');
 $tel = htmlspecialchars($_POST['tel'],ENT_QUOTES, 'UTF-8');
@@ -91,8 +91,8 @@ $_SESSION['email'] = $email;
     <form action="post.php" method="post">
     <table class="formTable">
     
-    <tr><th>お問い合わせの種類</th><td><?php echo $contactList[$contact]; ?></td></tr>
-    <tr><th>お問い合わせ内容</th><td><?php echo $comment; ?></td></tr>
+    <tr><th>お問い合わせの種類</th><td><?php echo $enquiry_typeList[$enquiry_type]; ?></td></tr>
+    <tr><th>お問い合わせ内容</th><td><?php echo $enquiry; ?></td></tr>
     <tr><th>お名前</th><td><?php echo $name; ?></td></tr>
     <tr><th>性別</th><td><?php echo $gender; ?></td></tr>
     <tr><th>電話番号（半角）</th><td><?php echo $tel; ?></td></tr>
