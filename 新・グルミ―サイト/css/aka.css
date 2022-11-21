@@ -266,3 +266,22 @@ i {
 	float: left;
 	margin-right: 81px;
 }
+
+.btn input {
+  height: 80px;
+  width: 220px;
+  font-size: 18px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #2e0000;      /*--文字------*/
+  border: solid 2px #fffdf7;   /*--枠------*/
+  border-radius: 3px;
+  transition: .4s;
+  background: #f6b483;
+}
+.btn input:hover {
+  background: #ffffff;
+  color: #2e0000;
+  border: solid 2px #ff8800;
+}
