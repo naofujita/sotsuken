@@ -61,12 +61,12 @@
 <section id="bicycle" class="wrapper">
   <div class="box">
 <h2 class="section-title">グランドメニュー</h2>
-
+<form method="post" action="../新・グルミ―サイト/php/cart.php"></form>
 <ul>
   <li>
   <img src="img/p-ku.png" alt="テキストテキストテキスト">
-  <h2 class="content-title">ポークカレー</h2>
-  <h3>480円</h3>
+  <h2 class="content-title">ポークカレー</h2><input type="hidden" name="name" value="ポークカレー">
+  <h3>480円</h3><input type="hidden" name="price" value="480">
   数量：<input type="text" name="num" value="0" style="width:30px;">
   <input type="submit" value="カートに入れる">
   </li>
@@ -213,6 +213,7 @@
   <input type="submit" value="カートに入れる">
   </li>
 </ul>
+</form>
 </section>
 </div>
 </main>
