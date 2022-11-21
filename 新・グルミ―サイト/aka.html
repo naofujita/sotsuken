@@ -28,8 +28,8 @@
         <html>
             <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
             <script>bubbly({
-              colorStart: "#ffdab9",
-              colorStop: "#ffdab9",
+              colorStart: "#fbdac8",
+              colorStop: "#fbdac8",
             });</script>
     </html>    
 
@@ -38,15 +38,15 @@
 
  <div class="box_con">
     <form method="post" action="mail.php">
-     <table class="formTable">
-
+  
 <form method="post" action="test.html">
-<tr>
+
 
 
 <br>
 <br>
-    
+<table class="formTable">
+
 <th><p>お名前</p></th>
 <td><input type="text" maxlength="100" placeholder="例）斎藤グルミ" id="name" class="wide" name="お名前" size="20"></td>
 </tr>
@@ -93,13 +93,15 @@
 <td><input type="date" name="calendar" max="9999-12-31" id="birth"></td>
 </tr>
 
-
-<div class="center">
-<th><p class="center"><input type="submit" value="確認画面へ" id="touroku"></p></th>
-</div>
-
+</table>
 </form>
 
+<body>
+    <div class="btn" >
+    <p class="center"style="text-align : center ; font-size: 2rem; margin-top: 30px; ;"><input type="submit" value="確認画面へ" id="touroku"></p>
+    </div>
+    </body>
+    
 <script>
     document.getElementById("touroku").onclick = function() {
         const name = document.getElementById("name").value;
