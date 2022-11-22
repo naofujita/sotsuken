@@ -47,61 +47,61 @@ if (!empty($_POST)) {
 <body>
 
     
- <div class="box_con">
-    <form method="post" action="mail.php">
-     <table class="formTable">
-
-<form method="post" action="test.html">
+<div class="box_con">
+    <form method="post" action="check.php">
+    <table class="formTable">
+      
+<form method="post" action="check.php">
 <tr>
 
 <h1 class="midasi">会員登録</h1>
 <br>
 <br>
-    
+<tr>
 <th><p>名前</p></th>
-<td><input type="text" maxlength="100" placeholder="斎藤グルミ" id="name" class="wide" name="お名前" size="20"></td>
+<td><input type="text" maxlength="200" placeholder="さいとうぐるみ" id="name" class="wide" name="name" size="30"></td>
 </tr>
 
 <tr>
 <th><p>名前(ふりがな)</p></th>
-<td><input type="text" maxlength="200" placeholder="さいとうぐるみ" id="name_huri" class="" size="30"></td>
+<td><input type="text" maxlength="200" placeholder="さいとうぐるみ" id="name_huri" class="wide" name="name_huri" size="30"></td>
 </tr>
 
 <tr>
 <th><p>メールアドレス</p></th>
-<td><input type="text" maxlength="254" placeholder="gourmmy@mail.com" id="mail" class="" size="30"></td>
+<td><input type="text" maxlength="254" placeholder="gourmmy@mail.com" id="mail" class="wide" name="mail" size="30"></td>
 </tr>
 
 <tr>
 <th><p>パスワード</p></th>
-<td><input type="password" maxlength="20" placeholder="半角英数8文字以上" id="pass" class=""></td>
+<td><input type="password" maxlength="20" placeholder="半角英数8文字以上" id="pass" class="wide" name="pass"></td>
 </tr>
 
 <tr>
 <th><p>パスワード再入力</p></th>
-<td><input type="password" maxlength="20" placeholder="半角英数8文字以上" id="repass" class=""></td>
+<td><input type="password" maxlength="20" placeholder="半角英数8文字以上" id="repass" class="wide" name="repass"></td>
 </tr>
 
 <body>
 <tr>
 <th><p>郵便番号</p></th>
-<td><input type="text" maxlength="7" placeholder="ハイフンなし" id="yuubin" name="yuubin" class="" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');"></td>
+<td><input type="text" maxlength="7" placeholder="ハイフンなし" id="yuubin" name="yuubin" class="wide" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');"></td>
 </tr>
 
 <tr>
 <th><p>住所</p></th>
-<td><input type="text" maxlength="200" id="address" name="address" size="60"></td>
+<td><input type="text" maxlength="200" id="address" name="address" size="60" placeholder="例）大阪府東成区中本1丁目5-21"></td>
 </tr>
 </body>
 
 <tr>
 <th><p>電話番号</p></th>
-<td><input type="text" maxlength="21" placeholder="ハイフンなし" id="phone"></td>
+<td><input type="text" maxlength="21" placeholder="ハイフンなし" id="phone" name="phone"></td>
 </tr>
 
 <tr>
 <th><p>生年月日</p></th>
-<td><input type="date" name="calendar" max="9999-12-31" id="birth"></td>
+<td><input type="date" name="birth" max="9999-12-31" id="birth"></td>
 </tr>
 
 <div class="center">

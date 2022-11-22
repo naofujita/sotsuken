@@ -11,7 +11,7 @@ if (!empty($_POST['check'])) {
     // 入力情報をデータベースに登録
     $statement = $db->prepare("INSERT INTO touroku SET name=?, name_huri=?, mail=?, pass=?, repass=?, yuubin=?, address=?, phone=?, birth=?");
     $statement->execute(array(
-        $_SESSION['join']['name'],
+        $_SESSION['name'],
         $_SESSION['join']['name_huri'],
         $_SESSION['join']['mail'],
         $_SESSION['join']['pass'],
