@@ -4,7 +4,6 @@
 背景
 --------------------------------------------------*/
 
-
 /*--------------------------------------------------
 ヘッダー
 --------------------------------------------------*/
@@ -24,6 +23,7 @@
     align-items: center;
     margin:0 auto;
 	justify-content: center;
+  z-index: +1;
 
 }
 #header ul{
@@ -197,11 +197,39 @@ h2.h{
        }
       
        p.kessai img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 100px;
         margin-left: 10px;
         margin-right: 10px;
-        padding-right: 0px;
-        padding-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         
        }
+
+
+       #kate {
+        background: rgba(255, 255, 255, 0.753);
+      border-radius: 16px;
+      padding-top: 80px;
+      padding-bottom: 58px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5.3px);
+      -webkit-backdrop-filter: blur(5.3px);
+      border: 1px solid rgba(255, 255, 255, 0.29);
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 60px;
+      }
+
+      .sample {
+        font-size:2em;
+        text-align:center;
+        line-height:0.95em;
+        font-weight:bold;
+        color: rgb(8, 0, 0);
+        text-shadow: 
+          0 0 0.10em #ffffff,
+          0 0 0.15em #ffffff,
+          0 0 0.80em #ffd08a,
+          0 0 1.00em #ffffff;
+      }
