@@ -55,7 +55,7 @@
     //エラーの解決11/21 "60error"
     //エラーの原因変なところに}が入っていたり数があっていなかった(よくあるミス)
     //これは発見難しいからわしもよくミスる
-    if(isset($_POST['enquery'])){
+    if(isset($_POST['enquiry'])){
     
         //データを取得
         $name = $_POST["name"];
@@ -66,9 +66,6 @@
         $enquiry_type = $_POST["enquiry_type"];
         
         //正しく取得できているかの確認
-        print($name . ":" . $gender . ":" . 
-        $tel . ":" . $email . ":" . $enquiry . ":" 
-        . $enquiry_type);
         $dsn = 'mysql:dbname=gourmmy;host=localhost';
         $user = 'root';
         $password = '';
