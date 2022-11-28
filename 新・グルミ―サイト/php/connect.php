@@ -41,15 +41,88 @@
         </nav>
     </header> 
 <br>
-<br>
-<br>
 
-<h1 class="midasi">会員登録完了</h1>
+<ul class="progressbar">
+  <li class="complete">ご入力</li>
+  <li class="complete">ご確認</li>
+  <li class="active">完了</li>
+</ul>
+
+<h1 class="midasi">会員登録完了!</h1>
 <p style="text-align : center ; font-size: 2rem; margin-top: 30px;">
 ＜内容が登録されました!サインインページからログインしてください＞
 </p>
 <br>
 <br>
+
+
+<!--/*STEPドットバー*/!-->
+<style>.progressbar {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.progressbar li {
+    position: relative;
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+    width: 33.333%;
+    color: #999999;
+    font-weight: bold;
+    counter-increment: steps;
+}
+.progressbar li:before {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 7px auto 20px auto;
+    content: '';
+    line-height: 26px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    content: counter(steps);
+}
+.progressbar li:after {
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: -50%;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: #F5F5F5;
+}
+.progressbar li:first-child:after {
+    content: none;
+}
+.progressbar li.active,
+.progressbar li.complete{
+    color: #0070BD;
+}
+.progressbar li.active:before,
+.progressbar li.complete:before {
+    background-color: #0070BD;
+    color: #FFF;
+}
+.progressbar li.active:after,
+.progressbar li.complete:after {
+    background-color: #0070BD;
+}
+
+/* 装飾 */
+ul{
+	margin: 40px 0 !important;
+}
+  body{
+	margin: 40px 20px;
+}
+</style>
 
 <?php
     //エラーの解決11/21 "60error"
@@ -66,10 +139,10 @@
         $tel = $_POST["tel"];
         $calendar = $_POST["calendar"];
         
-        //正しく取得できているかの確認
+       /*正しく取得できているかの確認
         print($name . ":" . $name_huri . ":" . 
         $mail . ":" . $pass . ":" . $yuubin . ":" .
-        $address . ":" . $tel . ":" . $calendar);
+        $address . ":" . $tel . ":" . $calendar);*/
         $dsn = 'mysql:dbname=gourmmy;host=localhost';
         $user = 'root';
         $password = '';
@@ -96,7 +169,7 @@
         
     <h1>
     <div class="btn" style="margin-top:20px;  margin-bottom: 20%;    font-size: 2rem;   transform: scale(1.5)">
-    <span><a href="../index.html"><input type="submit" value="HOMEへ戻る" id="subm" /></a></span>
+    <span><a href="../login.html"><input type="submit" value="サインインへ" id="subm" /></a></span>
     </div>
 </div>
 </body>

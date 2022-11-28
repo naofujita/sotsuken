@@ -21,7 +21,7 @@
         margin-top: 30px;
     }
 </style>
-    <link href="../css/check.css" rel="stylesheet" type="text/css">
+    <link href="../css/toiawase.css" rel="stylesheet" type="text/css">
     <link href="../css/tb_confirm.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../css/animation1.js"></script>
@@ -39,11 +39,85 @@
            </ul>
          </nav>
         </header>
-        
+<br>
 
+<ul class="progressbar">
+  <li class="complete">ご入力</li>
+  <li class="active">ご確認</li>
+  <li>完了</li>
+</ul>
 <br>
 <br>
-<br>
+
+
+<!--/*STEPドットバー*/!-->
+<style>.progressbar {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.progressbar li {
+    position: relative;
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+    width: 33.333%;
+    color: #999999;
+    font-weight: bold;
+    counter-increment: steps;
+}
+.progressbar li:before {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 7px auto 20px auto;
+    content: '';
+    line-height: 26px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    content: counter(steps);
+}
+.progressbar li:after {
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: -50%;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: #F5F5F5;
+}
+.progressbar li:first-child:after {
+    content: none;
+}
+.progressbar li.active,
+.progressbar li.complete{
+    color: #0070BD;
+}
+.progressbar li.active:before,
+.progressbar li.complete:before {
+    background-color: #0070BD;
+    color: #FFF;
+}
+.progressbar li.active:after,
+.progressbar li.complete:after {
+    background-color: #0070BD;
+}
+
+/* 装飾 */
+ul{
+	margin: 40px 0 !important;
+}
+  body{
+	margin: 40px 20px;
+}
+</style>
+
 <?php
 
 // セッションの開始
@@ -92,7 +166,7 @@ $_SESSION['email'] = $email;
     <title>確認画面</title>
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toiawase.css">
 </head>
 <!----<body>
     <div class="content">
@@ -105,53 +179,60 @@ $_SESSION['email'] = $email;
                 <p class="error">＊会員登録に失敗しました。</p>
             < ?php endif ?>
             <hr>--->
+            <div class="box_con02">
             <form action="connect.php" method="post">
-            <div class="control">
-                <p>名前</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['name']; ?></span>
-                <input type="hidden" name="name" value="<?= $_POST['name']; ?>"></p>
-            </div>
- 
-            <div class="control">
-                <p>名前(ふりがな)</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['name_huri']; ?></span>
-                <input type="hidden" name="name_huri" value="<?= $_POST['name_huri']; ?>"></p>
-            </div>
- 
-            <div class="control">
-                <p>メールアドレス</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['mail']; ?></span>
-                <input type="hidden" name="mail" value="<?= $_POST['mail']; ?>"></p>
-            </div>
+                <table class="formTable">
+                <tr>
+                    <th>名前</th>
+                    <td><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['name']; ?></span></td>
+                    <input type="hidden" name="name" value="<?= $_POST['name']; ?>">
+                </tr>
+            
+                <tr>
+                    <th>名前(ふりがな)</th>
+                    <td><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['name_huri']; ?></span></td>
+                    <input type="hidden" name="name_huri" value="<?= $_POST['name_huri']; ?>">
+                </tr>
+
+                <tr>
+                    <th>メールアドレス</th>
+                    <td><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['mail']; ?></span></td>
+                    <input type="hidden" name="mail" value="<?= $_POST['mail']; ?>">
+                </tr>
+            
 
               <!-- パスワード表示するのはダメ絶対！！！ -->
-            <input type="hidden" name="pass"  value="<?=  $_POST['pass']; ?>">
+                <input type="hidden" name="pass"  value="<?=  $_POST['pass']; ?>">
 
-            <div class="control">
-                <p>郵便番号</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['yuubin']; ?></span>
-                <input type="hidden" name="yuubin" value="<?= $_POST['yuubin']; ?>"></p>
-            </div>
- 
-            <div class="control">
-                <p>住所</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['address']; ?></span>
-                <input type="hidden" name="address" value="<?= $_POST['address']; ?>"></p>
-            </div>
- 
-            <div class="control">
-                <p>電話番号</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['tel']; ?></span>
-                <input type="hidden" name="tel" value="<?= $_POST['tel']; ?>"></p>
-            </div>
- 
-            <div class="control">
-                <p>生年月日</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['calendar']; ?></span>
-                <input type="hidden" name="calendar" value="<?= $_POST['calendar']; ?>"></p>
-            </div>
+            
+            <tr>
+                <th>郵便番号</th>
+                <td><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['yuubin']; ?></span></td>
+                <input type="hidden" name="yuubin" value="<?= $_POST['yuubin']; ?>">
+            </tr>
+           
+            <tr>
+                <th>住所</th>
+                <td><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['address']; ?></span></td>
+                <input type="hidden" name="address" value="<?= $_POST['address']; ?>">
+            </tr>
+            
+            <tr>
+                <th>電話番号</th>
+                <td><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['tel']; ?></span></td>
+                <input type="hidden" name="tel" value="<?= $_POST['tel']; ?>">
+            </tr>
+            
+            <tr>
+                <th>生年月日</th>
+                <td><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['calendar']; ?></span></td>
+                <input type="hidden" name="calendar" value="<?= $_POST['calendar']; ?>">
+            </tr>
+           </table>
  
             <br>
+            <br>
+
             <div class="btn" style="margin-top:20px;  margin-bottom: 10%;    font-size: 2rem;   transform: scale(1.5)">
             <button type="button"  onclick="history.back(-1)">内容を修正する</button>
             <button type="submit" class="btn next-btn">登録する</button>

@@ -22,7 +22,7 @@
     }
 </style>
     <link href="../css/toiawase.css" rel="stylesheet" type="text/css">
-    <link href="../css/tb_confirm.css" rel="stylesheet" type="text/css">
+    <link href="../css/ul_indexphp.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../css/animation1.js"></script>
 </head>
@@ -42,13 +42,90 @@
         
 
 <br>
+<ul class="progressbar">
+  <li class="complete">ご入力</li>
+  <li class="active">ご確認</li>
+  <li>完了</li>
+</ul>
 <br>
 <br>
+
 
 <h1 class="midasi">内容確認</h1>
 <p style="text-align : center ; font-size: 2rem; margin-top: 30px; ;">＜お問い合わせ内容をご確認の上、「送信」ボタンをクリックしてください。＞</p>
 <br>
 <br>
+<br>
+<br>
+
+
+<!---/*STEPドットバー*/!-->
+<style>.progressbar {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.progressbar li {
+    position: relative;
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+    width: 33.333%;
+    color: #999999;
+    font-weight: bold;
+    counter-increment: steps;
+}
+.progressbar li:before {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 7px auto 20px auto;
+    content: '';
+    line-height: 26px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    content: counter(steps);
+}
+.progressbar li:after {
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: -50%;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: #F5F5F5;
+}
+.progressbar li:first-child:after {
+    content: none;
+}
+.progressbar li.active,
+.progressbar li.complete{
+    color: #0070BD;
+}
+.progressbar li.active:before,
+.progressbar li.complete:before {
+    background-color: #0070BD;
+    color: #FFF;
+}
+.progressbar li.active:after,
+.progressbar li.complete:after {
+    background-color: #0070BD;
+}
+
+/* 装飾 */
+ul{
+	margin: 40px 0 !important;
+}
+  body{
+	margin: 40px 20px;
+}
+</style>
 
 <?php
 
