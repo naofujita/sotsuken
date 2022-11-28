@@ -108,17 +108,20 @@ $_SESSION['email'] = $email;
             <form action="connect.php" method="post">
             <div class="control">
                 <p>名前</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['name']; ?></span></p>
+                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['name']; ?></span>
+                <input type="hidden" name="name" value="<?= $_POST['name']; ?>"></p>
             </div>
  
             <div class="control">
                 <p>名前(ふりがな)</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['name_huri']; ?></span></p>
+                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['name_huri']; ?></span>
+                <input type="hidden" name="name_huri" value="<?= $_POST['name_huri']; ?>"></p>
             </div>
  
             <div class="control">
                 <p>メールアドレス</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['mail']; ?></span></p>
+                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['mail']; ?></span>
+                <input type="hidden" name="mail" value="<?= $_POST['mail']; ?>"></p>
             </div>
 
               <!-- パスワード表示するのはダメ絶対！！！ -->
@@ -126,22 +129,26 @@ $_SESSION['email'] = $email;
 
             <div class="control">
                 <p>郵便番号</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['yuubin']; ?></span></p>
+                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['yuubin']; ?></span>
+                <input type="hidden" name="yuubin" value="<?= $_POST['yuubin']; ?>"></p>
             </div>
  
             <div class="control">
                 <p>住所</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['address']; ?></span></p>
+                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['address']; ?></span>
+                <input type="hidden" name="address" value="<?= $_POST['address']; ?>"></p>
             </div>
  
             <div class="control">
                 <p>電話番号</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['tel']; ?></span></p>
+                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['tel']; ?></span>
+                <input type="hidden" name="tel" value="<?= $_POST['tel']; ?>"></p>
             </div>
  
             <div class="control">
                 <p>生年月日</p>
-                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['calendar']; ?></span></p>
+                <p><span class="fas fa-angle-double-right"></span> <span class="check-info"><?php echo $_POST['calendar']; ?></span>
+                <input type="hidden" name="calendar" value="<?= $_POST['calendar']; ?>"></p>
             </div>
  
             <br>

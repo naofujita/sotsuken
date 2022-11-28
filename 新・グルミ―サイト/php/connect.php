@@ -53,36 +53,33 @@
 
 <?php
     //エラーの解決11/21 "60error"
-    //エラーの原因変なところに}が入っていたり数があっていなかった(よくあるミス)
-    //これは発見難しいからわしもよくミスる
     if(isset($_POST['name'])){
     
         //データを取得
+              
         $name = $_POST["name"];
         $name_huri = $_POST["name_huri"];
         $mail = $_POST["mail"];
         $pass = $_POST["pass"];
-        $repass = $_POST["repass"];
         $yuubin = $_POST["yuubin"];
         $address = $_POST["address"];
         $tel = $_POST["tel"];
-        $calender = $_POST["calendar"];
+        $calendar = $_POST["calendar"];
         
         //正しく取得できているかの確認
         print($name . ":" . $name_huri . ":" . 
-        $mail . ":" . $pass . ":" . $repass . ":" . $yuubin . ":" .
+        $mail . ":" . $pass . ":" . $yuubin . ":" .
         $address . ":" . $tel . ":" . $calendar);
         $dsn = 'mysql:dbname=gourmmy;host=localhost';
         $user = 'root';
         $password = '';
         try{
             $dbh = new PDO($dsn, $user, $password);
-            //enquiryがenqueryになってたよ...
-            $sql = "INSERT INTO member(id,name,name_huri,mail,pass,repass,yuubin,address,tel,calendar)
-            VALUES(?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO member(id,name,name_huri,mail,pass,yuubin,address,tel,calendar)
+            VALUES(?,?,?,?,?,?,?,?,?)";
             //SQLインジェクション対策
             $stmt = $dbh->prepare($sql);
-            $flag = $stmt->execute(array(NULL,$name,$name_huri,$mail,$pass,$repass,$yuubin,$address,$tel,$calendar));
+            $flag = $stmt->execute(array(NULL,$name,$name_huri,$mail,$pass,$yuubin,$address,$tel,$calendar));
             //正しくSQLが処理されたかの確認
             if(!$flag){
                 print("エラー");
