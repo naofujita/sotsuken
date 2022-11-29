@@ -5,116 +5,122 @@
 <title>お問い合せ</title>
 <link href="css/toiawase.css" rel="stylesheet" type="text/css">
 </head>
+<div class="bg_pattern Paper_v2"></div>
 <body>
     
-    <header id="header" class="wrapper">
-        <h3 class="gourmmy">Gourmmy</h3>
-          <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-				        <li><a href="gaiyou.html">Gourmmyについて</a></li>
-                <li><a href="toiawase.html">問い合わせ</a></li>
-				        <li><a href="login.html">サインイン</a></li>
-           </ul>
-         </nav>
-    </header>
-        
-    <html>
-</html>
-<br>
-<ul class="progressbar">
-  <li class="active">ご入力</li>
-  <li>ご確認</li>
-  <li>完了</li>
-</ul>
+       <header id="header" class="wrapper">
+           <h3 class="gourmmy">Gourmmy</h3>
+             <nav>
+               <ul>
+                   <li><a href="index2.html">HOME</a></li>
+				           <li><a href="gaiyou.html">Gourmmyについて</a></li>
+                   <li><a href="toiawase.html">問い合わせ</a></li>
+				           <li><a href="login.html">サインイン</a></li>
+              </ul>
+            </nav>
+       </header>
+       <br>
+        <ul class="progressbar">
+         <li class="active">ご入力</li>
+         <li>ご確認</li>
+         <li>完了</li>
+       </ul>
+       <br>
+       <br>
+       <br>
 
-<h1 class="midasi">お問い合せ</h1>
-<p style="text-align : center ; font-size: 2rem; margin-top: 30px; ;">＜お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。＞</p>
-<br>
-<br>
-        
+ 
+       <h1 class="midasi"><p>――――Contact――――</p></h1>
+                                    
+       <p style="text-align : center ; font-size: 2rem; margin-top: 30px; ;">＜お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。＞</p>
+          <br>
+          <br>
+          <br> 
+          <br>
+          <br>
+          <br>
+       </style>
+      
 
-<!--/*STEPドットバー*/!-->
-<style>.progressbar {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.progressbar li {
-    position: relative;
-    list-style-type: none;
-    text-align: center;
-    text-transform: uppercase;
-    width: 33.333%;
-    color: #999999;
-    font-weight: bold;
-    counter-increment: steps;
-}
-.progressbar li:before {
-    display: block;
-    width: 26px;
-    height: 26px;
-    margin: 7px auto 20px auto;
-    content: '';
-    line-height: 26px;
-    font-size: 12px;
-    text-align: center;
-    border-radius: 50%;
-    background-color: #F5F5F5;
-    content: counter(steps);
-}
-.progressbar li:after {
-    position: absolute;
-    z-index: -1;
-    top: 15px;
-    left: -50%;
-    width: 100%;
-    height: 2px;
-    content: '';
-    background-color: #F5F5F5;
-}
-.progressbar li:first-child:after {
-    content: none;
-}
-.progressbar li.active,
-.progressbar li.complete{
-    color: #0070BD;
-}
-.progressbar li.active:before,
-.progressbar li.complete:before {
-    background-color: #0070BD;
-    color: #FFF;
-}
-.progressbar li.active:after,
-.progressbar li.complete:after {
-    background-color: #0070BD;
-}
+        <!--/*STEPドットバー*/!-->
+       <style>.progressbar {
+         position: relative;
+         margin: 0;
+         padding: 0;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         }
+         .progressbar li {
+         position: relative;
+         list-style-type: none;
+         text-align: center;
+         text-transform: uppercase;
+         width: 33.333%;
+         color: #5f5e5e;
+         font-weight: bold;
+         counter-increment: steps;
+         }
+         .progressbar li:before {
+         display: block;
+         width: 26px;
+         height: 26px;
+         margin: 7px auto 20px auto;
+         content: '';
+         line-height: 26px;
+         font-size: 12px;
+         text-align: center;
+         border-radius: 50%;
+         background-color: #a19f9f;
+         content: counter(steps);
+         }
+         .progressbar li:after {
+         position: absolute;
+         z-index: -1;
+         top: 15px;
+         left: -50%;
+         width: 100%;
+         height: 2px;
+         content: '';
+         background-color: #a19f9f;
+         }
+         .progressbar li:first-child:after {
+         content: none;
+         }
+         .progressbar li.active,
+         .progressbar li.complete{
+         color: #fd7200;
+         }
+         .progressbar li.active:before,
+         .progressbar li.complete:before {
+          background-color: #fd7200;
+          color: #FFF;
+         }
+         .progressbar li.active:after,
+         .progressbar li.complete:after {
+         background-color: #fd7200;
+         }
+ 
+          /* 装飾 */
+         ul{
+	       margin: 40px 0 !important;
+         }
+         body{
+	       margin: 40px 20px;
+         }
+        </style>
 
-/* 装飾 */
-ul{
-	margin: 40px 0 !important;
-}
-  body{
-	margin: 40px 20px;
-}
-</style>
 
-
-
-<div class="box_con02">
-  <form  action="php/index.php" method="post">
-    <table class="formTable">
-      <tr>
-      <th>お問い合わせの種類<span>必須</span></th>
-        <td>
-        <!-- 
-        4つのラジオボタンのname属性がバラバラなのを修正した
-        valueを数字にして次のページで配列を定義して直接中身を持ってこれるようにした
-        -->
-          <div class="box_br">
+      <div class="box_con02">
+       <form  action="php/index.php" method="post">
+           <table class="formTable">
+             <tr>
+             <th>お問い合わせの種類<span>必須</span></th>
+           <td>
+            <!-- 
+            4つのラジオボタンのname属性がバラバラなのを修正した
+            valueを数字にして次のページで配列を定義して直接中身を持ってこれるようにした-->
+       <div class="box_br">
             <label><input type="radio" name="enquiry_type" value="0">注文について</label>
           </div>
           <div class="box_br">
@@ -143,7 +149,7 @@ ul{
 
       <tr>
         <th>お名前<span>必須</span></th>
-        <td><input size="20" type="text" class="wide" name="name"  placeholder="例）斎藤　ぐるみ" required/></td>
+        <td><input size="20" type="text" class="wide" name="name"  placeholder="例）斎藤　グルミ" required/></td>
       </tr>
       <tr>
         <th>性別<span>必須</span></th>
@@ -159,14 +165,14 @@ ul{
       </tr>
       <tr>
         <th>電話番号（半角）</th>
-        <td><input size="30" type="text" class="wide" name="tel" placeholder="例）09012345678" maxlength="11"> </td>
+        <td><input size="30" type="text" class="wide" name="tel" placeholder="ハイフンなし" maxlength="11"> </td>
       </tr>
       <tr>
         <th>Mail（半角）<span>必須</span></th>
         <td><input size="30" type="text" class="wide" name="email" placeholder="例）gourmmy@harapeko.com" required /></td>
       </tr>
     </table>
-  </div>
+   </div>
     <div class="con_pri">
       <div class="box_pri">
         <div class="box_tori">
@@ -195,11 +201,11 @@ ul{
     </div>
     <div class="box_check">
       <label>
-        <input type="checkbox" autocomplete="off" style="transform: scale(2.0);" name="acceptance-714" value="1" aria-invalid="false" 
+        <input type="checkbox" autocomplete="off" style="transform: scale(2.0);  margin-bottom: 10%;"  name="acceptance-714" value="1" aria-invalid="false" 
         class="agree" id="agree" onclick="getUserAccept()"><span class="check">プライバシーポリシーに同意する</span>
       </label>
     </div>
-    <p class="btn" style="margin-bottom: 20%;    font-size: 2rem;   transform: scale(1.5)">
+    <p class="btn" style="margin-bottom: 10%;    font-size: 2rem;   transform: scale(1.5)">
       <span><a href="php/index.php"></a><input type="submit" value="確認画面へ" disabled id="subm" /></span>
     </p>
   </form>
@@ -217,4 +223,5 @@ ul{
     }
   }
 </script>
+
 </html>
