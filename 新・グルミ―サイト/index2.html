@@ -79,7 +79,7 @@
 <br>
 <br>
 <br>
-<h2>店舗一覧</h2>
+<h1>店舗一覧</h1>
 <br>
 <br>
 <br>
@@ -139,3 +139,65 @@
                   <div class="fadeRight"><img src="img/店舗 カフェ.png" alt=””><p>チェマール</p></div>
                 </div>
                 </div>
+
+
+
+
+
+                
+        <div class="footer04">
+          <div class="colorchangeimg_bg">
+          <ul class="menu">
+             <li id="rogo"><div><img src="img/フッターロゴ2.png" alt=””></div></li>
+            <li><a href="file:///C:/Users/maoyu/Desktop/%E5%8D%92%E7%A0%94/sotsuken-main%20(4)/sotsuken-main/%E6%96%B0%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%9F%E2%80%95%E3%82%B5%E3%82%A4%E3%83%88/gaiyou2.html">グルミーについて</a></li>
+            <li><a href="file:///C:/Users/maoyu/Desktop/%E5%8D%92%E7%A0%94/sotsuken-main%20%E8%87%AA%E5%88%86/sotsuken-main/%E6%96%B0%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%9F%E2%80%95%E3%82%B5%E3%82%A4%E3%83%88/aka.html">会員登録</a></li>
+            <li><a href="file:///C:/Users/maoyu/Desktop/%E5%8D%92%E7%A0%94/sotsuken-main%20(4)/sotsuken-main/%E6%96%B0%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%9F%E2%80%95%E3%82%B5%E3%82%A4%E3%83%88/toiawase.html">お問い合せ</a></li>
+            <li><a href="#">ページトップ</a></li>
+           <li id="tizu"><div class="footer-info-ph">
+              <!-- <img src="" alt="地図？"> -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13122.464201247343!2d135.5301017!3d34.6896386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d25d70e8a5%3A0xa6e5af41bdc2d2c0!2z5aSn6Ziq5Z-O44Ob44O844Or!5e0!3m2!1sja!2sjp!4v1667581665145!5m2!1sja!2sjp" 
+              width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <p id="zyusyo">住所：大阪府大阪市中央区大阪城３−１<br>電話番号：00000000</p>
+            </div>
+          </li>
+          </ul>
+        
+        </div>
+        <div class="footer5">
+          <p class="copyright">
+            &copy;2023 Gourmmy
+          </p>
+      </div>
+</div>
+	</body>
+
+<!-- pagetop -->
+<div id="pagetop" hidden>
+  <img class="page" src="img/page.png"  >
+</div>
+
+<!-- スクロール用 -->
+<script>
+  $(function(){
+    var topBtn=$('#pagetop');
+    topBtn.hide();
+   
+    //ボタンの表示設定
+    $(window).scroll(function(){
+      if($(this).scrollTop()>800){
+        //---- 画面を800pxスクロールしたら、ボタンを表示する
+        topBtn.fadeIn();
+      }else{
+        //---- 画面が800pxより上なら、ボタンを表示しない
+        topBtn.fadeOut();
+      } 
+    });
+   
+    //ボタンをクリックしたら、スクロールして上に戻る
+    topBtn.click(function(){
+      $('body,html').animate({
+      scrollTop: 0},500);
+      return false;
+    });
+  });
+  </script>
