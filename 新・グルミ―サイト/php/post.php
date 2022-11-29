@@ -26,6 +26,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../css/animation1.js"></script>
 </head>
+
+<div class="bg_pattern Paper_v2"></div>
+
 <body>
     
     <header id="header" class="wrapper">
@@ -45,6 +48,10 @@
   <li class="complete">ご確認</li>
   <li class="active">完了</li>
 </ul>
+<br>
+<br>
+<br>
+
 
 <h1 class="midasi">お問い合わせ完了</h1>
 <p style="text-align : center ; font-size: 2rem; margin-top: 30px;">
@@ -53,8 +60,12 @@
 </p>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 
-<!---/*STEPドットバー*/!-->
+<!--/*STEPドットバー*/!-->
 <style>.progressbar {
     position: relative;
     margin: 0;
@@ -69,7 +80,7 @@
     text-align: center;
     text-transform: uppercase;
     width: 33.333%;
-    color: #999999;
+    color: #4d4d4d;
     font-weight: bold;
     counter-increment: steps;
 }
@@ -83,7 +94,7 @@
     font-size: 12px;
     text-align: center;
     border-radius: 50%;
-    background-color: #F5F5F5;
+    background-color: #a19f9f;
     content: counter(steps);
 }
 .progressbar li:after {
@@ -94,23 +105,23 @@
     width: 100%;
     height: 2px;
     content: '';
-    background-color: #F5F5F5;
+    background-color: #a19f9f;
 }
 .progressbar li:first-child:after {
     content: none;
 }
 .progressbar li.active,
 .progressbar li.complete{
-    color: #0070BD;
+    color: #fd7200;
 }
 .progressbar li.active:before,
 .progressbar li.complete:before {
-    background-color: #0070BD;
+    background-color: #fd7200;
     color: #FFF;
 }
 .progressbar li.active:after,
 .progressbar li.complete:after {
-    background-color: #0070BD;
+    background-color: #fd7200;
 }
 
 /* 装飾 */
@@ -164,8 +175,8 @@ ul{
     ?>
         
     <h1>
-    <div class="btn" style="margin-top:20px;  margin-bottom: 20%;    font-size: 2rem;   transform: scale(1.5)">
-    <span><a href="../index.html"><input type="submit" value="HOMEへ戻る" id="subm" /></a></span>
+    <div class="btn" style="margin-top:20px;  margin-bottom: 10%;    font-size: 2rem;   transform: scale(1.5)">
+    <span><a href="../index2.html"><input type="submit" value="HOMEへ戻る" id="subm" /></a></span>
     </div>
 </div>
 </body>

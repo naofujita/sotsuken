@@ -26,6 +26,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../css/animation1.js"></script>
 </head>
+
+<div class="bg_pattern Paper_v2"></div>
+
 <body>
     
     <header id="header" class="wrapper">
@@ -39,16 +42,18 @@
            </ul>
          </nav>
         </header>
-        
+        <br>
 
-<br>
-<ul class="progressbar">
-  <li class="complete">ご入力</li>
-  <li class="active">ご確認</li>
-  <li>完了</li>
-</ul>
-<br>
-<br>
+
+  <ul class="progressbar">
+      <li class="complete">ご入力</li>
+      <li class="active">ご確認</li>
+     <li>完了</li>
+  </ul>
+ <br>
+ <br>
+ <br>
+
 
 
 <h1 class="midasi">内容確認</h1>
@@ -57,9 +62,12 @@
 <br>
 <br>
 <br>
+<br>
+<br>
 
 
-<!---/*STEPドットバー*/!-->
+
+<!--/*STEPドットバー*/!-->
 <style>.progressbar {
     position: relative;
     margin: 0;
@@ -74,7 +82,7 @@
     text-align: center;
     text-transform: uppercase;
     width: 33.333%;
-    color: #999999;
+    color: #4d4d4d;
     font-weight: bold;
     counter-increment: steps;
 }
@@ -88,7 +96,7 @@
     font-size: 12px;
     text-align: center;
     border-radius: 50%;
-    background-color: #F5F5F5;
+    background-color: #a19f9f;
     content: counter(steps);
 }
 .progressbar li:after {
@@ -99,23 +107,23 @@
     width: 100%;
     height: 2px;
     content: '';
-    background-color: #F5F5F5;
+    background-color: #a19f9f;
 }
 .progressbar li:first-child:after {
     content: none;
 }
 .progressbar li.active,
 .progressbar li.complete{
-    color: #0070BD;
+    color: #fd7200;
 }
 .progressbar li.active:before,
 .progressbar li.complete:before {
-    background-color: #0070BD;
+    background-color: #fd7200;
     color: #FFF;
 }
 .progressbar li.active:after,
 .progressbar li.complete:after {
-    background-color: #0070BD;
+    background-color: #fd7200;
 }
 
 /* 装飾 */
@@ -150,52 +158,51 @@ $_SESSION['gender'] = $gender;
 $_SESSION['tel'] = $tel;
 $_SESSION['email'] = $email;
  */
-
-?>
+ ?>
     <div class="box_con02">
-    <form action="post.php" method="post">
-        <table class="formTable">       
-            <tr>
-                <th>お問い合わせの種類</th>
-                <!-- 配列の名前が違ってたよ -->
-                <td><?php echo $contactList[$contact]; ?></td>
-                <input type="hidden" name="enquiry_type" value="<?= $contactList[$contact]; ?>">
-            </tr>                         
-            <tr>
-                <th>お問い合わせ内容</th>
-                <!-- $_POSTで受け取った変数名が違うよ -->
-                <td><?php echo $enquiry; ?></td>
-                <input type="hidden" name="enquiry" value="<?= $enquiry; ?>">
-            </tr>
-            <tr>
-                <th>お名前</th>
-                <td><?php echo $name; ?></td>
-                <input type="hidden" name="name" value="<?= $name; ?>">
-            </tr>
-            <tr>
-                <th>性別</th>
-                <td><?php echo $gender; ?></td>
-                <input type="hidden" name="gender" value="<?= $gender; ?>">
-            </tr>
-            <tr>
-                <th>電話番号（半角）</th>
-                <td><?php echo $tel; ?></td>
-                <input type="hidden" name="tel" value="<?= $tel; ?>">
-            </tr>
-            <tr>
-                <th>メールアドレス</th>
-                <td><?php echo $email; ?></td>
-                <input type="hidden" name="email" value="<?= $email; ?>">
-            </tr>
+      <form action="post.php" method="post">
+            <table class="formTable">       
+                  <tr>
+                     <th>お問い合わせの種類</th>
+                     <!-- 配列の名前が違ってたよ -->
+                     <td><?php echo $contactList[$contact]; ?></td>
+                     <input type="hidden" name="enquiry_type" value="<?= $contactList[$contact]; ?>">
+                 </tr>                         
+                  <tr>
+                     <th>お問い合わせ内容</th>
+                     <!-- $_POSTで受け取った変数名が違うよ -->
+                     <td><?php echo $enquiry; ?></td>
+                     <input type="hidden" name="enquiry" value="<?= $enquiry; ?>">
+                 </tr>
+                 <tr>
+                     <th>お名前</th>
+                     <td><?php echo $name; ?></td>
+                     <input type="hidden" name="name" value="<?= $name; ?>">
+                 </tr>
+                 <tr>
+                     <th>性別</th>
+                     <td><?php echo $gender; ?></td>
+                     <input type="hidden" name="gender" value="<?= $gender; ?>">
+                 </tr>
+                 <tr>
+                     <th>電話番号（半角）</th>
+                     <td><?php echo $tel; ?></td>
+                     <input type="hidden" name="tel" value="<?= $tel; ?>">
+                 </tr>
+                 <tr>
+                     <th>メールアドレス</th>
+                     <td><?php echo $email; ?></td>
+                     <input type="hidden" name="email" value="<?= $email; ?>">
+                 </tr><!--echoで変数に格納された値を表示-->
+          </table>
+      
+    </div>
         
-        <!--echoで変数に格納された値を表示-->
-        </table>
-    <br><br>
-        
-        <div class="btn" style="margin-bottom: 20%;    font-size: 2rem;   transform: scale(1.5)">
+    <div class="btn" style="margin-bottom: 10%;  margin-top:2em;  font-size: 2rem;   transform: scale(1.5)">
         <input type="button" value="内容を修正する" onclick="history.back(-1)">
-        <input type="submit" value="送信"></div>
-</form>
-</div>
+        <input type="submit" value="送信">
+    </div>
+    </form>
+
 </body>
 </html>
