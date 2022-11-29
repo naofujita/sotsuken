@@ -329,7 +329,7 @@ margin-bottom: 60px;
   .tenpo{
     display: flex;
     position: relative;
-    margin-bottom: 250px;
+    margin-bottom: 200px;
     
   }
  
@@ -380,7 +380,7 @@ margin-bottom: 60px;
       }
       .centerImg4 > * {
       width:49%;
-      margin-bottom:20px;
+      margin-bottom:10px;
       margin-left:2%;
       display:inline-block;
       font-size:12px;
@@ -436,7 +436,7 @@ margin-bottom: 60px;
           }
           .centerImg6 > * {
           width:49%;
-          margin-bottom:100px;
+          margin-bottom:8px;
           margin-left:2%;
           display:inline-block;
           font-size:12px;
@@ -509,3 +509,130 @@ margin-bottom: 60px;
     top: -1em;
     padding: 0 1em;
   }
+
+
+
+
+  /*--------------------------------------------------
+footer
+--------------------------------------------------*/
+.footer04 {
+  color: #808080;
+  background: linear-gradient(270deg,  rgba(30, 34, 34, 0.589) 100%, rgba(30, 34, 34, 0.589) 100%),
+  url(https://richfieldsplastics.com/wp-content/uploads/2020/01/Plastic-Utensils-and-Kitchenware-768x512.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 30px;
+ }
+ .footer04 a {
+  color: #ffffff;
+  text-decoration: none;
+  
+ }
+ .footer04 a:hover {
+  text-decoration: underline;
+ }
+ .footer04 .menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ .footer04 .menu li {
+  margin: 0;
+  padding: 0 20px;
+
+   /*コレ*/display: flex;
+    /*コレ*/align-items: center;
+  
+ }
+ .footer04 .menu li:last-child {
+  border: none;
+ }
+ .footer04 .copyright {
+  margin: 0;
+  padding: 20px 0 0 0;
+ }
+ 
+ @media only screen and (max-width: 599px) {
+ .footer04 .menu {
+  justify-content: flex-start;
+ }
+ .footer04 .menu li {
+  width: 50%;
+  box-sizing: border-box;
+  border: none;
+ }
+ .footer04 .menu li:nth-child(odd) {
+  border-right: 1px #ffffff solid;
+ }
+ }
+ #footer-info-ph{
+  width: 10px;
+}
+#tizu {
+  margin-left: 80px;
+  margin-top: 30px;
+
+}
+#zyusyo {
+  color: #ffffff;
+  text-align: left;
+}
+
+.footer04 .copyright{
+  color: #ffffff;
+}
+
+#rogo img{
+  width: 250px;
+  height: 150px;
+    /*コレ*/display: flex;
+    /*コレ*/align-items: center;
+  
+}
+#rpgo{
+  padding-right: 0;
+}
+
+
+/* pagetop */
+#pagetop{
+  position:fixed;
+  right:10px;
+  bottom:10px;
+  cursor:pointer;
+  z-index: 10;
+}
+
+#pagetop img{
+  width: 100px;
+  height: 100px;
+
+}
+
+
+
+h1 {
+  position: relative;
+  color: #333;
+  display: inline-block;
+  margin: 47px 0;
+  text-shadow: 0 0 2px white;
+}
+h1:before {
+  content: "";
+  position: absolute;
+  background: #ffd69d;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
