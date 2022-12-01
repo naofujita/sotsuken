@@ -37,10 +37,12 @@ h1 {
   /*リセットcss↓*/
 html {
   overflow-y: scroll;
+  
 }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
   margin: 0;
   padding: 0;
+  font-family: "Times New Roman", Times, serif;
 }
 address,caption,cite,code,dfn,em,strong,th,var {
   font-style: normal;
@@ -234,6 +236,7 @@ i {
 	justify-content: center;
   z-index: +1;
   width: 100%;
+  font-family: "Times New Roman", Times, serif;
 }
   
 
@@ -244,7 +247,7 @@ i {
 }
 #header li{
     list-style: none;
-    font-family: "游ゴシック", "YuGothic", "メイリオ", meiryo, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     font-weight: bold;
 	font-size: 0.9rem; 
 }
