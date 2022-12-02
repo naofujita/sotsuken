@@ -13,37 +13,86 @@
 </head>
 
 
-
+<!-- menubar -->
 <body>
- <header id="header" class="wrapper">
-<h1 id="mew" >Mewdo Curry</h1>
-  <nav>
+  <header id="header">
+    <h1>Gourmmy</h1>
+    
+    <nav>
     <ul>
-     <li><a href="#">HOME</a></li>
-     <li><a href="#bicycle">グランドメニュー</a></li>
-     <li><a href="#dori">ドリンク</a></li>
-     <li><a href="#">買い物カゴ</a></li>
-   </ul>
- </nav>
-</header>
+      <li><a href="index2.html">Home</a></li>
+      <li class="has-child"><a href="#">Genre</a>
+        <ul>
+
+            <li><a href="#wa"><dl>
+              <dt><img src="img/海鮮丼2.jpg" alt=""></dt>
+              <dd>和食</dd>
+              </dl></a></li>
+            <li><a href="#you"><dl>
+              <dt><img src="img/ピザ２.png" alt=""></dt>
+              <dd>洋食</dd>
+              </dl></a></li>
+            <li><a href="#tyu"><dl>
+              <dt><img src="img/ラーメン5.jpg" alt=""></dt>
+              <dd>中華料理</dd>
+              </dl></a></li>
+            <li><a href="#ka"><dl>
+              <dt><img src="img/韓国.jpg" alt=""></dt>
+              <dd>韓国料理</dd>
+              </dl></a></li>
+            <li><a href="#su"><dl>
+              <dt><img src="img/スイーツ2.webp" alt=""></dt>
+              <dd>スイーツ</dd>
+              </dl></a></li>
+
+        </ul>
+      </li>
+
+      <li><a href="gaiyou.html">Overview</a></li>
+      <li><a href="toiawase.html">Contact</a></li>
+        <li class="has-child"><a href="#"><img src="img/アイコン4.png" style="width: 30px;  height: 30px;"></a>
+        <ul>
+
+          
+          <li><a href="#wa"><dl>
+            <dt></dt>
+            <dd></dd>
+            </dl></a></li>
+          <li><a href="login.html"><dl>
+            <dt><img src="img/鍵3.jpeg" alt=""></dt>
+            <dd>Login</dd>
+            </dl></a></li>
+          <li><a href="#"><dl>
+            <dt><img src="img/看板2.jpg" alt=""></dt>
+            <dd></dd>
+            </dl></a></li>
+          <li><a href="aka.html"><dl>
+            <dt><img src="img/会員登録3.jpg" alt=""></dt>
+            <dd>Membership</dd>
+            </dl></a></li>
+          <li><a href="#"><dl>
+            <dt></dt>
+            <dd></dd>
+            </dl></a></li>
 
 
-<body>
-  <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
-  <script type="text/javascript" src="js/Mewdo curry.js"></script>
-</body>
+      </ul>
+    </li>
+</ul>
+  </nav>
+  </header>
+
+
+  <div class="bg_pattern Paper_v2"></div>
+
 
 <main>
-  
  <div id="mainvisual">
-  <img src="img/ss.jpg" alt="テキストテキストテキスト">
+  <img src="img/ミュード2.jpg" alt="テキストテキストテキスト">
  </div>
 
-<section id="about" class="wrapper">
- <h2 class="section-title">商品へのこだわり</h2>
- <div class="content">
- <div class="text">
-   <h3>
+
+ <div class="mybox">
   安全なものを、安心して食べていただくため、<br>
   高い品質を目指す取り組みを継続して行っています。<br>
   <br>
@@ -52,16 +101,17 @@
   品質へのこだわりが、 “おいしい” へつながる第一歩です。<br>
   <br>
 
-   </h3>
 </div>
-</div>
-</section>
+
+
+ 
 
 
 <section id="bicycle" class="wrapper">
   <div class="box">
 <h2 class="section-title">グランドメニュー</h2>
 <form method="post" action="../新・グルミ―サイト/php/cart.php">
+  <input type="submit" value="実行">
 <ul>
   <li>
   <img src="img/p-ku.png" alt="テキストテキストテキスト">
