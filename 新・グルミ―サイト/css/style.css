@@ -2,7 +2,47 @@
 
 
 
+/*=============
+.背景
+==============*/
 
+.bg_pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+  }
+  .Paper_v2 {
+    background-image:
+      repeating-linear-gradient(to bottom,
+        transparent 25px,
+        rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
+        transparent 27px,  transparent 51px, 
+        rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
+        transparent 53px,  transparent 77px, 
+        rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
+        transparent 79px,  transparent 103px, 
+        rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
+        transparent 105px,  transparent 129px, 
+        rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px),
+  
+      repeating-linear-gradient(to right,
+        transparent 25px,
+        rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
+        transparent 27px,  transparent 51px, 
+        rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
+        transparent 53px,  transparent 77px, 
+        rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
+        transparent 79px,  transparent 103px, 
+        rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
+        transparent 105px,  transparent 129px, 
+        rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px);
+  }
+  
+  
 
 
 html{
@@ -55,58 +95,241 @@ li{
 /*--------------------------------------------------
 ヘッダー
 --------------------------------------------------*/
-#header{
-    position: fixed;
-    width: 100%;
-    display: flex;
-    height: 90px;
-    background-color: dimgray;
-    border: double 5px ;
-    padding-top: 0px;
-    box-sizing: border-box;
-    justify-content:space-between;
-    align-items: center;
-    margin:0;
-	justify-content: center;
-    z-index: +1;
-    
- 
+/*========= ドロップダウンのためのCSS ===============*/
 
-}
-#header ul{
-    display: flex;
-    padding:01px 0;
-}
-#header li{
+/*==ナビゲーション全体の設定*/
+nav{
+    background:rgb(52, 73, 59);
+    color:#fff;
+    text-align: center;
+  
+  }
+  
+  /*ナビゲーションを横並びに*/
+  nav ul{
+      /*2階層目の基点にするためrelativeを指定*/
+    position: relative;
     list-style: none;
-    font-family: "游ゴシック", "YuGothic", "メイリオ", meiryo, sans-serif;
-    font-weight: bold;
-	font-size: 0.9rem; 
-}
-#header li a{
+    display: flex;
+    justify-content: center;
+  }
+  
+  /*2階層目以降は横並びにしない*/
+  nav ul ul{
+    display: block;
+  }
+  
+  /*ナビゲーションのリンク設定*/
+  nav ul li a{
+      /*矢印の基点にするためrelativeを指定*/
+    position: relative;
     display: block;
     text-decoration: none;
-    color: white;
-    margin-right: 35px;
-
+    color: #999;
+    padding:20px 45px;
+    transition:all .3s;
+  }
+  
+  nav ul li li a{
+    padding:20px;
+  }
+  
+  nav ul li a:hover{
+    color:#fff; 
+  }
+  
+  /*==矢印の設定*/
+  
+  /*2階層目を持つliの矢印の設定*/
+  
+  nav ul li.has-child > a::before{
+    content:'';
+    position: absolute;
+    left:15px;
+    top:25px;
+    width:6px;
+    height:6px;
+    border-top: 2px solid #999;
+      border-right:2px solid #999;
+      transform: rotate(135deg);
+  }
+  
+  /*==2階層目以降の画像設定*/
+  
+  nav ul li.has-child img{
+    max-width: 100%;
+    height: auto;
+    transition: all .5s;
+    vertical-align: bottom;
+  }
+  
+  /*hoverしたら画像拡大*/
+  nav ul li.has-child img:hover{
+    transform: scale(1.2);
+  }
+  
+  nav ul li.has-child dt{
+    overflow: hidden;
+    height: 20vh;
+    margin:0 0 20px 0;
+  }
+  
+  @media screen and (max-width:1200px){
+  nav ul li.has-child dt{
+    height: 12vh;
+  }
     
-}
-#header li a:hover{
-    opacity: 0.7;
-}
-.gourmmy{
-	font-family: Gourmmy;
-	text-align: left;
-	float: left;
-	margin-right: 81px;
-}
-
-#mew {
-   margin: 0;
-   padding: 40px;
-   text-align: left;
-}
-
+  }
+  
+  /*== 2層目の設定 */
+  
+  nav li.has-child ul{
+    /*絶対配置で位置を指定*/
+      position: absolute;
+    left:5%;
+    top:58px;
+    z-index: 4;
+    /*子要素を横並びに*/    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+      /*形状を指定*/
+    background:rgba(255, 255, 255, 0.452);
+    width:90%;
+      /*はじめは非表示*/
+    visibility: hidden;
+    opacity: 0;
+       /*アニメーション設定*/
+    transition: all .3s;
+  }
+  
+  /*hoverしたら表示*/
+  nav li.has-child:hover > ul{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /*各ナビゲーション横幅*/
+  nav li.has-child ul li{
+    width:20%;
+  }
+  
+  /*ナビゲーションaタグの形状*/
+  nav li.has-child ul li a{
+    color: rgb(255, 255, 255);
+  }
+  
+  nav li.has-child ul li a:hover,
+  nav li.has-child ul li a:active{
+    background:#d6ca5c;
+  }
+  
+  /*==768px以下の形状*/
+  @media screen and (max-width:768px){
+    
+    nav ul{
+      display: block;
+    }
+  
+    nav li.has-child ul{
+      position: relative;
+    left:0;
+    top:0;
+    width:100%;
+    visibility:visible;/*JSで制御するため一旦表示*/
+    opacity:1;/*JSで制御するため一旦表示*/
+    display: none;/*JSのslidetoggleで表示させるため非表示に*/
+    transition:none;/*JSで制御するためCSSのアニメーションを切る*/
+  }
+      
+    nav li.has-child ul li{
+      width:100%;
+      text-align: left;
+    }
+    
+    nav li.has-child ul li dl{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav li.has-child ul li dt{
+      width:30%;
+      height: auto;
+      margin: 0;
+    }
+  
+    nav li.has-child ul li dd{
+      width:64%;      
+    }
+  
+      
+      nav ul li a{
+        padding: 10px 20px;
+        border-bottom:1px solid #ccc;
+  }
+      
+      nav ul li li a{
+      padding: 0;
+  }
+    
+  /*矢印の位置と向き*/
+    
+  nav ul li.has-child > a::before{
+    top:17px;
+    left:20px;
+      transform: rotate(135deg);
+  }
+      
+  nav ul li.has-child.active > a::before{
+      transform: rotate(-45deg);
+  }
+  }
+  
+  /*========= レイアウトのためのCSS ===============*/
+  
+  h1{
+    font-size:2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    
+  }
+  
+  h2{
+    font-size:1.2rem;
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+  
+  p{
+    margin-top:20px;  
+  }
+  
+  small{
+    background:#333;
+    color:#fff;
+    display: block;
+    text-align: center;
+    padding:20px;
+  }
+  
+  
+  section{
+    padding:30px;
+  }
+  
+  section:nth-child(2n){
+    background:#f3f3f3; 
+  }
+  
+  
+  .aka img{
+    width: 500px;
+    height: 1000px;
+  }
+  
+    /* ヘッダー ここまで*/
 /*--------------------------------------------------
 Minvisual
 --------------------------------------------------*/
@@ -245,4 +468,45 @@ Menu
     width:100%;
     margin-bottom:30px;
 }
+}
+
+
+/* 商品へのこだわり */
+.mybox{
+	background-color: rgb(253, 248, 241);	/* 背景色 */
+	border: 1px solid #ccc; /* 線の太さ・種類・色 */
+	box-shadow:1px 1px 6px 0px #ccc;
+	-moz-box-shadow:1px 1px 6px 0px #ccc;
+	-webkit-box-shadow:1px 1px 6px 0px #ccc;
+	-o-box-shadow:1px 1px 6px 0px #ccc;
+	margin: 20px 5px; /* 外側の余白 上下・左右 */
+	padding: 30px 20px 20px 20px; /* 内側の余白 上・右・下・左 */
+	position: relative;
+	z-index: 0;
+    width: 670px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.mybox:after{
+	background-color: #fd8743; /* マステ部分の色1 */
+	background-image: linear-gradient(45deg, #fd8743 25%, transparent 25%, #fd8743 75%, #fd8743 75%, #fd8743), linear-gradient(45deg, #fd8743 25%, transparent 25%, transparent 75%, #fd8743 75%, #fd8743); /* マステ部分の色2 */
+	background-position: 0 0, 12px 12px;
+	background-size: 24px 24px;
+	border-left: 2px dotted rgba(255,255,255,0.9);
+	border-right: 2px dotted rgba(255,255,255,0.9);
+	box-shadow: 0 0 5px rgba(255,255,255,0.5);
+	content: '商品へのこだわり';
+	display: block;
+	margin: 0 0 10px 0;
+	padding: 5px 20px;
+	color: #fff;  /* マステ部分文字色 */
+	text-align: center;
+	position: absolute;
+	top: -10px;
+	left: 20px;
+	transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
 }

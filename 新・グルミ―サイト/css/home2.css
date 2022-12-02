@@ -165,6 +165,7 @@ input:checked ~ .in img,input:checked ~ .in span::before{
   margin: 0 auto;
   width: 60%;
   text-align: center;
+
 }
 
 
@@ -614,7 +615,7 @@ section:nth-child(2n){
           .z-index_test_tyu {
             height:  850px;             /* 高さ指定 */
             width:  750px;              /* 幅指定 */
-            background-color: #999556;  /* 背景色指定 */
+            background-color: #b8614b;  /* 背景色指定 */ 
             position:  absolute;        /* 位置指定 */
             bottom: -100px;                  /* 位置指定 */
             left: 100px;                /* 位置指定 */
@@ -624,7 +625,7 @@ section:nth-child(2n){
           .z-index_test_ka {
             height:  850px;             /* 高さ指定 */
             width:  750px;              /* 幅指定 */
-            background-color: #b8614b;  /* 背景色指定 */
+            background-color: #999556;  /* 背景色指定 */
             position:  absolute;        /* 位置指定 */
             bottom: -100px;                  /* 位置指定 */
             left: 100px;                /* 位置指定 */
