@@ -16,7 +16,7 @@
 <!-- menubar -->
 <body>
   <header id="header">
-    <h1>Gourmmy</h1>
+    <h1>Gourmmy<p style="color:  rgb(202, 93, 30);; font-size: 50px; margin-top: 5px;">Mewdo curry</p></h1>
     
     <nav>
     <ul>
@@ -54,7 +54,7 @@
         <ul>
 
           
-          <li><a href="#wa"><dl>
+          <li><a><dl>
             <dt></dt>
             <dd></dd>
             </dl></a></li>
@@ -86,13 +86,13 @@
   <div class="bg_pattern Paper_v2"></div>
 
 
-<main>
+
  <div id="mainvisual">
-  <img src="img/ミュード2.jpg" alt="テキストテキストテキスト">
+  <img src="img/カレー4.jpg" alt="テキストテキストテキスト">
  </div>
 
 
- <div class="mybox">
+ <div class="mybox" style="font-size: 18px;">
   安全なものを、安心して食べていただくため、<br>
   高い品質を目指す取り組みを継続して行っています。<br>
   <br>
@@ -100,7 +100,6 @@
   食材の仕入れや管理、加工、調理はもちろん、店舗の衛生維持にいたるまで、<br>
   品質へのこだわりが、 “おいしい” へつながる第一歩です。<br>
   <br>
-
 </div>
 
 
@@ -111,6 +110,7 @@
   <div class="box">
 <h2 class="section-title">グランドメニュー</h2>
 <form method="post" action="../新・グルミ―サイト/php/cart.php">
+  <input type="submit" value="実行">
 <ul>
   <li>
   <img src="img/p-ku.png" alt="テキストテキストテキスト">
@@ -266,8 +266,79 @@
 </section>
 </div>
 </main>
-<footer id="footer">
-<p>&copy; 2023 Gourmmy</p>
-</footer>
+
+          <!-- フッター -->
+          
+          <footer id="footer06" class="footer outer-block">
+            <div class="inner-block">
+              <div class="cont-wrap">
+                <div class="cont">
+                  <div class="info">
+                    <a href="https://b-risk.jp/" class="logo">
+                      <img src="img/フッターロゴ3.png" alt=””>
+                    </a>
+                    <p class="address">
+                      〒540-0002<br>
+                      大阪府大阪市中央区大阪城３−１　<br>
+                      TEL: 00-0000-0000
+                    </p>
+                  </div>
+                  <ul class="nav">
+                    <li><a href="https://b-risk.jp/works/">Home</a></li>
+                    <li><a href="https://b-risk.jp/blog/">Overview</a></li>
+                    <li><a href="https://b-risk.jp/recruit/">Contact</a></li>
+                    <li><a href="https://b-risk.jp/company/">Login</a></li>
+                    <li><a href="https://b-risk.jp/contact/">Membership</a></li>
+                  </ul>
+                </div>
+                <div class="map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13122.464201247343!2d135.5301017!3d34.6896386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d25d70e8a5%3A0xa6e5af41bdc2d2c0!2z5aSn6Ziq5Z-O44Ob44O844Or!5e0!3m2!1sja!2sjp!4v1667581665145!5m2!1sja!2sjp" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+              </div>
+            </div>
+            <p class="copyright" style="background-color:  rgb(34, 11, 11); text-align: center; color: aliceblue;">
+              COPYRIGHT © Gourmmy.
+            </p>
+          </footer>
+      
+      
+      
+  
+
+<!-- pagetop -->
+<div id="pagetop" hidden>
+  <img class="page" src="img/page.png"  >
+</div>
+    
+    
+<!-- スクロール用 -->
+<script>
+  $(function(){
+    var topBtn=$('#pagetop');
+    topBtn.hide();
+   
+    //ボタンの表示設定
+    $(window).scroll(function(){
+      if($(this).scrollTop()>800){
+        //---- 画面を800pxスクロールしたら、ボタンを表示する
+        topBtn.fadeIn();
+      }else{
+        //---- 画面が800pxより上なら、ボタンを表示しない
+        topBtn.fadeOut();
+      } 
+    });
+   
+    //ボタンをクリックしたら、スクロールして上に戻る
+    topBtn.click(function(){
+      $('body,html').animate({
+      scrollTop: 0},500);
+      return false;
+    });
+  });
+  </script>
+          
+      
+    
+      
 </body>
 </html>
