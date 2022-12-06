@@ -58,11 +58,8 @@ a{
 img{
     max-width:100%
 }
-img{
-    object-fit: cover;
-    width: 200px;
-  height: 150px;
-}
+
+
 li{
     list-style:none;
 }
@@ -158,9 +155,11 @@ nav{
   
   nav ul li.has-child img{
     max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 200px;
     transition: all .5s;
     vertical-align: bottom;
+    text-align: center;
   }
   
   /*hoverしたら画像拡大*/
@@ -194,7 +193,7 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
       /*形状を指定*/
-    background:rgba(255, 255, 255, 0.452);
+    background:rgba(95, 95, 95, 0.452);
     width:90%;
       /*はじめは非表示*/
     visibility: hidden;
@@ -330,6 +329,8 @@ nav{
   }
   
     /* ヘッダー ここまで*/
+
+    
 /*--------------------------------------------------
 Minvisual
 --------------------------------------------------*/
@@ -341,58 +342,6 @@ Minvisual
     max-width:1920px;
     height:600px;
     object-fit:cover;
-}
-
-/*--------------------------------------------------
-About
---------------------------------------------------*/
-#about .content{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-#about img{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    margin-right:30px;
-}
-#about .text{
-    text-align: center;
-}
-#about{
-  background-color: #fff4ea;
-  box-shadow: 0 0 0 8px #fff4ea;
-  border: 2px dashed #ffbf7f;
-  border-radius: 100px;
-  color: #000000;
-  margin-bottom: 80px;
-  width: 50%;
-  text-align: center;
-    margin-bottom: 80px;
-}
-
-  
-
-#about.circle4 > .circle-txt1 {
-  display: block;
-  width: 100%;
-  font-size: 50px;
-  color: #ffff99;
-  line-height: 2;
-}
-#about.circle4 > .circle-txt2 {
-  display: block;
-  width: 100%;
-  font-size: 20px;
-  margin-top: 1px;
-}
-#about.kakomi-box {
- margin: 2em auto;
- padding: 1em;
- width:  100%;
- border: 5px double;
- border-radius: 50px;
 }
 
 
@@ -422,19 +371,14 @@ div.box{
   width: 70%;
   margin: 0 auto;
     padding-bottom: 90px;
+    margin-bottom: 150px;
   }
 
-
-
-
-/*--------------------------------------------------
-footer
---------------------------------------------------*/
-#footer{
-    font-size:0.5rem;
-    padding:10px 0;
-    text-align: center;
+.box img{
+  width: 200px;
 }
+
+
 
 /*--------------------------------------------------
 SP
@@ -483,10 +427,11 @@ Menu
 	padding: 30px 20px 20px 20px; /* 内側の余白 上・右・下・左 */
 	position: relative;
 	z-index: 0;
-    width: 670px;
+    width: 690px;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
+    margin-top: 180px;
 }
 .mybox:after{
 	background-color: #fd8743; /* マステ部分の色1 */
@@ -509,4 +454,107 @@ Menu
 	-moz-transform: rotate(-3deg);
 	-webkit-transform: rotate(-3deg);
 	-o-transform: rotate(-3deg);
+}
+
+ /*--------------------------------------------------
+footer
+--------------------------------------------------*/
+#footer06 {
+  background:rgb(52, 73, 59);
+}
+ 
+#footer06 img{
+  width: 80%;
+  height: 180px;
+  padding-left: 320px;
+
+}
+
+#footer06 .cont-wrap {
+  padding: 40px 0;
+
+
+}
+ 
+#footer06 .info .address {
+  margin: 20px 0;
+  padding-left: 20px;
+  color: #ccc;
+  padding-left: 400px;
+}
+ 
+#footer06 .cont .nav a {
+  color: #ccc;
+  padding-left: 400px;
+}
+ 
+#footer06 .cont-wrap .map {
+  width: 800px;
+  height: 300px;
+  margin-right: 200px;
+  margin-top: 80px;
+}
+ 
+#footer06 .cont-wrap .map iframe {
+  width: 100%;
+  height: 100%;
+}
+ 
+@media only screen and (min-width: 641px) {
+  #footer06 .cont-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+ 
+@media only screen and (max-width: 640px) {
+  #footer06 .cont-wrap {
+    padding: 30px 0;
+  }
+  #footer06 .cont .logo img {
+    width: 120px;
+  }
+  #footer06 .nav {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+  #footer06 .nav li {
+    border-top: 1px solid #555;
+  }
+  #footer06 .nav li:last-child {
+    border-bottom: 1px solid #555555;
+  }
+  #footer06 .nav li a {
+    display: block;
+    padding: 12px 20px;
+    background-size: 6px auto;
+  }
+  #footer06 .cont-wrap .map {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+  }
+}
+
+
+
+/* pagetop */
+#pagetop{
+  position:fixed;
+  right:10px;
+  bottom:10px;
+  cursor:pointer;
+  z-index: 10;
+}
+
+#pagetop img{
+  width: 100px;
+  height: 100px;
+
 }

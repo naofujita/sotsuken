@@ -4,55 +4,244 @@
 背景
 --------------------------------------------------*/
 
-/*--------------------------------------------------
-ヘッダー
---------------------------------------------------*/
-/*--------------------------------------------------
-ヘッダー  auto 100px auto
---------------------------------------------------*/
-#header{
-  position: fixed;
-  width: 100%;
-    display: flex;
-    height: 90px;
-    background-color: dimgray;
-    border: double 5px ;
-    padding-top: 5px;
-    box-sizing: border-box;
-    justify-content:space-between;
-    align-items: center;
-    margin:0 auto;
-	justify-content: center;
-  z-index: +1;
+
+/* ヘッダー */
+/*========= ドロップダウンのためのCSS ===============*/
+
+/*==ナビゲーション全体の設定*/
+nav{
+  background:rgb(52, 73, 59);
+  color:#fff;
+  text-align: center;
+  height: 80px;
 
 }
-#header ul{
-    display: flex;
-    padding:01px 0;
+
+/*ナビゲーションを横並びに*/
+nav ul{
+    /*2階層目の基点にするためrelativeを指定*/
+  position: relative;
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
-#header li{
-    list-style: none;
-    font-family: "游ゴシック", "YuGothic", "メイリオ", meiryo, sans-serif;
-    font-weight: bold;
-	font-size: 0.9rem; 
+
+/*2階層目以降は横並びにしない*/
+nav ul ul{
+  display: block;
 }
-#header li a{
+
+/*ナビゲーションのリンク設定*/
+nav ul li a{
+    /*矢印の基点にするためrelativeを指定*/
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #999;
+  padding:20px 45px;
+  transition:all .3s;
+}
+
+nav ul li li a{
+  padding:20px;
+}
+
+nav ul li a:hover{
+  color:#fff; 
+}
+
+/*==矢印の設定*/
+
+/*2階層目を持つliの矢印の設定*/
+
+nav ul li.has-child > a::before{
+  content:'';
+  position: absolute;
+  left:15px;
+  top:25px;
+  width:6px;
+  height:6px;
+  border-top: 2px solid #999;
+    border-right:2px solid #999;
+    transform: rotate(135deg);
+}
+
+/*==2階層目以降の画像設定*/
+
+nav ul li.has-child img{
+  max-width: 100%;
+  height: auto;
+  transition: all .5s;
+  vertical-align: bottom;
+}
+
+/*hoverしたら画像拡大*/
+nav ul li.has-child img:hover{
+  transform: scale(1.2);
+}
+
+nav ul li.has-child dt{
+  overflow: hidden;
+  height: 20vh;
+  margin:0 0 20px 0;
+}
+
+@media screen and (max-width:1200px){
+nav ul li.has-child dt{
+  height: 12vh;
+}
+  
+}
+
+/*== 2層目の設定 */
+
+nav li.has-child ul{
+  /*絶対配置で位置を指定*/
+    position: absolute;
+  left:5%;
+  top:58px;
+  z-index: 4;
+  /*子要素を横並びに*/    
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+    /*形状を指定*/
+    background:rgba(95, 95, 95, 0.452);
+  width:90%;
+    /*はじめは非表示*/
+  visibility: hidden;
+  opacity: 0;
+     /*アニメーション設定*/
+  transition: all .3s;
+}
+
+/*hoverしたら表示*/
+nav li.has-child:hover > ul{
+  visibility: visible;
+  opacity: 1;
+}
+
+/*各ナビゲーション横幅*/
+nav li.has-child ul li{
+  width:20%;
+}
+
+/*ナビゲーションaタグの形状*/
+nav li.has-child ul li a{
+  color: rgb(255, 255, 255);
+}
+
+nav li.has-child ul li a:hover,
+nav li.has-child ul li a:active{
+  background:#d6ca5c;
+}
+
+/*==768px以下の形状*/
+@media screen and (max-width:768px){
+  
+  nav ul{
     display: block;
-    text-decoration: none;
-    color: white;
-    margin-right: 35px;
+  }
+
+  nav li.has-child ul{
+    position: relative;
+  left:0;
+  top:0;
+  width:100%;
+  visibility:visible;/*JSで制御するため一旦表示*/
+  opacity:1;/*JSで制御するため一旦表示*/
+  display: none;/*JSのslidetoggleで表示させるため非表示に*/
+  transition:none;/*JSで制御するためCSSのアニメーションを切る*/
+}
+    
+  nav li.has-child ul li{
+    width:100%;
+    text-align: left;
+  }
+  
+  nav li.has-child ul li dl{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav li.has-child ul li dt{
+    width:30%;
+    height: auto;
+    margin: 0;
+  }
+
+  nav li.has-child ul li dd{
+    width:64%;      
+  }
 
     
+    nav ul li a{
+      padding: 10px 20px;
+      border-bottom:1px solid #ccc;
 }
-#header li a:hover{
-    opacity: 0.7;
+    
+    nav ul li li a{
+    padding: 0;
 }
-.gourmmy{
-	font-family: Gourmmy;
-	text-align: left;
-	float: left;
-	margin-right: 81px;
+  
+/*矢印の位置と向き*/
+  
+nav ul li.has-child > a::before{
+  top:17px;
+  left:20px;
+    transform: rotate(135deg);
 }
+    
+nav ul li.has-child.active > a::before{
+    transform: rotate(-45deg);
+}
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1{
+  font-size:2rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  
+}
+
+h2{
+  font-size:1.2rem;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+p{
+  margin-top:20px;  
+}
+
+small{
+  background:#333;
+  color:#fff;
+  display: block;
+  text-align: center;
+  padding:20px;
+}
+
+
+section{
+  padding:30px;
+}
+
+section:nth-child(2n){
+  background:#f3f3f3; 
+}
+
+
+.aka img{
+  width: 500px;
+  height: 1000px;
+}
+
+  /* ヘッダー ここまで*/
 
 
 
@@ -84,8 +273,9 @@ img{
     color: rgb(122, 76, 33);
     border-radius: 0.5em;
     width: 700px;
- margin: 0 auto;
+    margin: 0 auto;
     text-align: center;
+    margin-bottom: 100px;
 
   
   }
@@ -93,26 +283,14 @@ img{
   h2{
     text-align: center;
     margin-bottom: 15px;
+    color: rgb(65, 85, 75);
   }
 h2.h{
     text-align: center;
     margin-bottom: 20px;
+    color: rgb(65, 85, 75);
 }
-  .box{
-    box-sizing: border-box;
-     /*コレ*/width: 56%;
-    /*コレ*/max-width: 100%;
-    margin: 0 auto;
-    background-color: #fff4ea;
-    box-shadow: 0 0 0 8px #fff4ea;
-    border: 2px dashed #ffbf7f;
-    border-radius: 100px;
-    color: #000000;
-    margin-bottom: 80px;
-    text-align: center;
-    margin-top: 110px;
-    padding: 24px;
-  }
+
 
   p.sample img {
     display: flex;
@@ -131,7 +309,6 @@ h2.h{
     }
 
     .circle4 {
-        
         display: inline-block;
         align-items: center;
         align-content: center;
@@ -170,9 +347,8 @@ h2.h{
       .kakomi-box2 {
         margin: 1em auto;
         padding: 1em;
-        width:  50%;
-        border: 5px double;
-        border-radius: 50px;
+        width:  80%;
+        /*border-radius: 50px;*/
         background-color: #fff;
     
       
@@ -183,15 +359,13 @@ h2.h{
         height: 80px;
         margin-left: 80px;
         margin-bottom: 35px;
-        margin-top: 35px;
        }
 
        .kakomi-box {
         margin: 1em auto;
-        padding: 1em;
-        width:  50%;
-        border: 5px double;
-        border-radius: 50px;
+        width:  80%;
+       /* border: 5px double #775639;*/
+        /*border-radius: 50px;*/
         background-color: #fff;
       
        }
@@ -206,30 +380,197 @@ h2.h{
         
        }
 
+/* 左右に二重線をつけた囲み枠 
+.box5 {
+  background-color: #c85d05;
+  color: #fff;
+  margin: 2em 0;
+  padding: 2em;
+  position: relative;
+}
+.box5::after {
+  content: "";
+  border-color: #853e04 #fff #fff #853e04;
+  border-style: solid;
+  border-width: 0 0 24px 24px;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+*/
 
-       #kate {
-        background: rgba(255, 255, 255, 0.753);
-      border-radius: 16px;
-      padding-top: 80px;
-      padding-bottom: 58px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(5.3px);
-      -webkit-backdrop-filter: blur(5.3px);
-      border: 1px solid rgba(255, 255, 255, 0.29);
-      width: 60%;
-      margin: 0 auto;
-      margin-bottom: 60px;
-      }
 
-      .sample {
-        font-size:2em;
-        text-align:center;
-        line-height:0.95em;
-        font-weight:bold;
-        color: rgb(8, 0, 0);
-        text-shadow: 
-          0 0 0.10em #ffffff,
-          0 0 0.15em #ffffff,
-          0 0 0.80em #ffd08a,
-          0 0 1.00em #ffffff;
-      }
+/* 左右に二重線をつけた囲み枠 */
+.box5 {
+ padding-top: 20px;
+  background: #fceecf; /* 背景色 */
+  border-left: double 6px #ffc06e; /* 左線の色 */
+  border-right: double 6px #ffc06e; /* 右線の色 */
+  width: 80%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22); /* 影の色 */
+  margin: 0 auto;
+}
+
+.box5 p {
+  margin: 0; 
+  padding: 1em;
+  text-align: center;
+}
+
+
+
+
+
+
+
+ /*--------------------------------------------------
+footer
+--------------------------------------------------*/
+#footer06 {
+  background:rgb(52, 73, 59);
+  margin-top: 200px;
+}
+ 
+#footer06 img{
+  width: 80%;
+  height: 180px;
+  padding-left: 320px;
+  margin-bottom: 10px;
+
+}
+
+#footer06 .cont-wrap {
+  padding: 40px 0;
+
+
+}
+ 
+#footer06 .info .address {
+  margin: 20px 0;
+  padding-left: 20px;
+  color: #ccc;
+  padding-left: 400px;
+}
+ 
+#footer06 .cont .nav a {
+  color: #ccc;
+  padding-left: 400px;
+}
+ 
+#footer06 .cont-wrap .map {
+  width: 800px;
+  height: 300px;
+  margin-right: 200px;
+  margin-top: 80px;
+}
+ 
+#footer06 .cont-wrap .map iframe {
+  width: 100%;
+  height: 100%;
+}
+ 
+@media only screen and (min-width: 641px) {
+  #footer06 .cont-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+ 
+@media only screen and (max-width: 640px) {
+  #footer06 .cont-wrap {
+    padding: 30px 0;
+  }
+  #footer06 .cont .logo img {
+    width: 120px;
+  }
+  #footer06 .nav {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+  #footer06 .nav li {
+    border-top: 1px solid #555;
+  }
+  #footer06 .nav li:last-child {
+    border-bottom: 1px solid #555555;
+  }
+  #footer06 .nav li a {
+    display: block;
+    padding: 12px 20px;
+    background-size: 6px auto;
+  }
+  #footer06 .cont-wrap .map {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+  }
+}
+
+  
+       /*--------------------------------------------------
+背景
+--------------------------------------------------*/
+
+.fixed-bg {
+  min-height: 100%;
+  background-size: cover;
+  -webkit-background-size: cover !important; 
+  -moz-background-size: cover !important; 
+  -o-background-size: cover; 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.5;  
+}
+
+.fixed-bg div{
+  flex-grow: 1;
+}
+
+
+
+
+.text-box {
+  background: rgba(255, 255, 255, 0.877);
+  padding: 20px;
+  margin: 0;
+  width: 60%;
+
+
+}
+
+body {
+	background-image: url("https://i.pinimg.com/originals/0c/fd/e8/0cfde86fc07ce14fa39e4581ea5cd4c3.jpg");
+	background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+
+/* pagetop */
+#pagetop{
+  position:fixed;
+  right:10px;
+  bottom:10px;
+  cursor:pointer;
+  z-index: 10;
+}
+
+#pagetop img{
+  width: 100px;
+  height: 100px;
+
+}
+
+
