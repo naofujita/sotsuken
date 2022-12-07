@@ -432,9 +432,9 @@ footer
 }
  
 #footer06 img{
-  width: 80%;
-  height: 180px;
-  padding-left: 320px;
+  width: 100%;
+  height: 190px;
+  padding-left: 330px;
   margin-bottom: 10px;
 
 }
@@ -550,7 +550,7 @@ footer
 }
 
 body {
-	background-image: url("https://i.pinimg.com/originals/0c/fd/e8/0cfde86fc07ce14fa39e4581ea5cd4c3.jpg");
+	background-image: url("https://img.tuscanyaccommodation.com/properties/casale-cardini/casale-cardini-candlelight.jpg?fit=clip&h=900");
 	background-size: cover;
   background-attachment: fixed;
 }
