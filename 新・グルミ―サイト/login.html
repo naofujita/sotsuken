@@ -1,5 +1,7 @@
 <!doctype html>
 <html lang="ja">
+  
+  <form method="post" action="login.php">
 <head>
 <meta charset="utf-8">
 <title>サインイン</title>
@@ -100,11 +102,15 @@
         <div class="sign-in-htm">
           <div class="group">
             <label for="user" class="label">Name</label>
-            <input id="user" type="text" class="input">
+            <input id="user" name="name" type="text" class="input">
+          </div>
+          <div class="group">
+            <label for="mail" class="label">Email Address</label>
+            <input id="mail" name="mail" type="text" class="input">
           </div>
           <div class="group">
             <label for="pass" class="label">password</label>
-            <input id="pass" type="password" class="input" data-type="password">
+            <input id="pass" name="pass" type="password" class="input" data-type="password">
           </div>
           <div class="group">
             <input id="check" type="checkbox" class="check" checked>
@@ -148,4 +154,5 @@
     </div>
   </div>
 </body>
+</form>
 </html>
