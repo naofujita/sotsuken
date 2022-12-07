@@ -340,6 +340,37 @@ html {
   /*----リセットcss*----/
   
   /*デザインcss↓*/
+  h5{
+    text-align: center;
+	font-size: 40px;
+}
+h5 span{
+    position: relative;
+    display: inline-block;
+    padding-bottom:0.5em;
+    border-bottom: 1px solid ;
+    border-bottom-color: #7E5555; /*ボーダーカラーの指定*/
+}
+      
+h5 span::before,
+h5 span::after {
+    position: absolute;
+    top: 100%;
+    left:50%;
+    transform:translateX(-50%);
+    content: '';
+    border: 10px solid transparent;
+}
+ 
+h5 span::before {
+    border-top: 10px solid #7E5555; /*ボーダーの斜めの線\/←の部分の指定*/
+}
+ 
+h5 span::after {
+    margin-top: -1px;
+    border-top: 10px solid white; /*三角の中身の指定（黒にすると黒い三角になる）*/
+}
+  
   .box_con02 {
 	max-width: 1000px;
 	margin: 0  auto;
@@ -448,6 +479,44 @@ html {
   .box_con02 form table tr textarea {
 	height: 10em;
   }
+
+  @media screen and (max-width: 640px) {
+  .tbl-r03 {
+    width: 90%;
+  }
+  .tbl-r03 tr {
+    display: block;
+    float: left;
+  }
+  .tbl-r03 tr td, 
+  .tbl-r03 tr th {
+    border-left: none;
+    display: block;
+    height: 50px;
+  }
+  .tbl-r03 thead {
+    display: block;
+    float: left;
+    width: 30%;
+  }
+  .tbl-r03 thead tr {
+    width: 100%;
+  }
+  .tbl-r03 tbody {
+    display: block;
+    float: left;
+    width: 70%;
+  }
+  .tbl-r03 tbody tr {
+    width: 50%;
+  }
+  .tbl-r03 tr td + td {
+    border-left: none;
+  }
+  .tbl-r03 tbody td:last-child {
+    border-bottom: solid 1px #ccc;
+  }
+}
   
   /*プライバシーのデザインcss↓*/
   .con_pri {
@@ -571,3 +640,43 @@ html {
   select {
 	cursor: pointer;
   }
+  /* 商品へのこだわり */
+.mybox{
+	background-color: rgba(255, 255, 255, 0.774);	/* 背景色 */
+	border: 1px solid #ccc; /* 線の太さ・種類・色 */
+	box-shadow:1px 1px 6px 0px #ccc;
+	-moz-box-shadow:1px 1px 6px 0px #ccc;
+	-webkit-box-shadow:1px 1px 6px 0px #ccc;
+	-o-box-shadow:1px 1px 6px 0px #ccc;
+	margin: 20px 5px; /* 外側の余白 上下・左右 */
+	padding: 30px 20px 20px 20px; /* 内側の余白 上・右・下・左 */
+	position: relative;
+	z-index: 0;
+    width: 670px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.mybox:after{
+	background-color: #fd8743; /* マステ部分の色1 */
+	background-image: linear-gradient(45deg, #fd8743 25%, transparent 25%, #fd8743 75%, #fd8743 75%, #fd8743),
+	linear-gradient(45deg, #fd8743 25%, transparent 25%, transparent 75%, #fd8743 75%, #fd8743); /* マステ部分の色2 */
+	background-position: 0 0, 12px 12px;
+	background-size: 24px 24px;
+	border-left: 2px dotted rgba(255,255,255,0.9);
+	border-right: 2px dotted rgba(255,255,255,0.9);
+	box-shadow: 0 0 5px rgba(255,255,255,0.5);
+	content: '~Welcome~';
+	display: block;
+	margin: 0 0 10px 0;
+	padding: 5px 20px;
+	color: #fff;  /* マステ部分文字色 */
+	text-align: center;
+	position: absolute;
+	top: -10px;
+	left: 20px;
+	transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+}
