@@ -98,17 +98,28 @@
        <br>
 
             
-       <h1 class="midasi">Membership</h1>
+       <h1 class="midasi" style="font-size: 4rem; color: #fff;
+       text-shadow: 1px 1px 1px #555, -1px 1px 1px #555, 1px -1px 1px #555, -1px -1px 1px #555, 1px 1px 1px #555, -1px 1px 1px #555, 
+       1px -1px 1px #555, -1px -1px 1px #555, 5px 5px #9ccc65;
+       ">~membership~</h1>
        <br>
+       <br>
+       <br>
+       <br>
+
       
        
-       <p style="text-align : center ; font-size: 2.5rem; margin-top: 30px; ;">＜内容をご入力の上、「確認画面へ」ボタンをクリックしてください。＞</p>
-       <br>
+       <div class="mybox">
+       <p style="text-align : center ; font-size: 1.5rem; margin-top: 30px; ;">ゲスト様！ようこそ！<br>内容をご入力の上、「確認画面へ」ボタンを<br>クリックしてください。</p>
+       </div>
        <br> 
        <br>
-<br>
-<br>
-<br>
+       <br>
+       
+       <h5><span>お客様情報</span></h5>
+       <br>
+       <br>
+       <br>
 
 
 
@@ -177,10 +188,37 @@
         <div class="box_con02">
            <form method="post" action="php/check.php">
                <table class="formTable">
-                   <tr>  
-                       <th><p>お名前</p></th>
-                       <td><input type="text" maxlength="100" placeholder="例）斎藤グルミ" id="name" class="wide" name="name" size="20" required></td>
-                   </tr>
+                 <thead>
+                     <!--<tr> 
+                      <ul>
+                       <th><li><p>お名前</p></th>
+                       <th><p>お名前(ふりがな)</p></th>
+                       <th><p>メールアドレス</p></th>
+                       <th><p>パスワード</p></th>
+                       <th><p>パスワード再入力</p></th>
+                       <th><p>郵便番号</p></th>
+                       <th><p>住所</p></th>
+                       <th><p>電話番号</p></th>
+                       <th><p>生年月日</p></th>
+                      </ul> 
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                        <td><input type="text" maxlength="100" placeholder="例）斎藤グルミ" id="name" class="wide" name="name" size="20" required></td> 
+                        <td><input type="text" maxlength="254" placeholder="例）gourmmy@harapeko.com" id="mail" name="mail" class="wide" size="30" required></td>
+                        <td><input type="password" maxlength="20" placeholder="半角英数8文字以上" id="pass" name="pass" class="wide" required></td>
+                        <td><input type="password" maxlength="20" placeholder="半角英数8文字以上" id="repass" name="repass" class="wide" required></td>
+                        <td><input type="text" maxlength="7" placeholder="ハイフンなし" id="yuubin" name="yuubin" class="wide" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');" required></td>
+                        <td><input type="text" maxlength="200" id="address" name="address" class="wide" size="60" placeholder="例）大阪府東成区中本1丁目5-21" required></td>
+                        <td><input type="text" maxlength="11" placeholder="ハイフンなし" id="tel" name="tel" class="wide" required></td>
+                        <td><input type="date" name="calendar" class="wide"  max="9999-12-31" id="calendar" required></td>
+                     </tr>
+                 </tbody>
+               </table>
+         </div>!-->
+                       
+                   
 
                    <tr>
                        <th><p>お名前(ふりがな)</p></th>
