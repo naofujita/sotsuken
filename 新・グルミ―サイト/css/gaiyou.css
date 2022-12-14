@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
 
 /*--------------------------------------------------
 背景
@@ -203,9 +204,9 @@ h1{
   font-size:2rem;
   text-align: center;
   text-transform: uppercase;
-  padding: 20px;
+  padding: 30px;
   background-color: rgb(255, 255, 255);
-  
+  font-family: "Times New Roman",  serif;
 }
 
 h2{
@@ -266,7 +267,9 @@ img{
     margin:0;padding:0;
   }
 
-
+.text-box p{
+  font-family: 'Noto Serif JP', sans-serif;
+}
   .section-title {
     background: #ffff99;
     padding: 0.8em;
@@ -276,7 +279,7 @@ img{
     margin: 0 auto;
     text-align: center;
     margin-bottom: 100px;
-
+  font-family: 'Noto Serif JP', sans-serif;
   
   }
 
@@ -299,6 +302,7 @@ h2.h{
     margin-bottom: 50px;
     margin: 0 auto;
     background-color: rgb();
+    
     
 
     }
@@ -400,25 +404,18 @@ h2.h{
 */
 
 
-/* 左右に二重線をつけた囲み枠 */
-.box5 {
- padding-top: 20px;
-  background: #fceecf; /* 背景色 */
-  border-left: double 6px #ffc06e; /* 左線の色 */
-  border-right: double 6px #ffc06e; /* 右線の色 */
-  width: 80%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22); /* 影の色 */
-  margin: 0 auto;
-}
-
-.box5 p {
-  margin: 0; 
-  padding: 1em;
+.kakomi-kage1 {
   text-align: center;
+  margin: 2em auto;
+  padding: 4em;
+  width: 80%;
+  color: #555555; /* 文字色 */
+  background-color: rgb(233, 231, 203); /* 背景色 */
+  box-shadow: 0 0 10px 10px  rgb(233, 231, 203); /* 影 */
+ }
+ .kakomi-kage1 p{
+  font-family: 'Noto Serif JP', sans-serif;
 }
-
-
-
 
 
 
@@ -564,6 +561,7 @@ body {
   bottom:10px;
   cursor:pointer;
   z-index: 10;
+  
 }
 
 #pagetop img{
@@ -573,3 +571,104 @@ body {
 }
 
 
+
+/*********************************
+*
+*  ローディング画面
+*
+*********************************/
+/* ローディング画面背景 */
+.loader-bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgb(255, 199, 114);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ローディングアニメーション */
+.loader {
+  color: #3b2a1e;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

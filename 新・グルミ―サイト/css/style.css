@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
 
 
 /*=============
@@ -76,7 +76,8 @@ li{
     font-size:2rem;
     text-align: center;
     margin-bottom:60px;
-    border-bottom: solid 1px #383e45;
+    border-bottom: solid 1px rgb(82, 59, 59);
+
 }
 .content-title{
     font-size: 1rem;
@@ -361,7 +362,7 @@ Menu
 
 
 div.box{
-    background: rgba(255, 255, 255, 0.753);
+ background: rgba(255, 255, 255, 0.753);
   padding-top: 80px;
   padding-bottom: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -416,6 +417,9 @@ Menu
 
 
 /* 商品へのこだわり */
+.mybox p{
+  font-family: 'Noto Serif JP', sans-serif;
+}
 .mybox{
 	background-color: rgb(253, 248, 241);	/* 背景色 */
 	border: 1px solid #ccc; /* 線の太さ・種類・色 */
@@ -427,13 +431,14 @@ Menu
 	padding: 30px 20px 20px 20px; /* 内側の余白 上・右・下・左 */
 	position: relative;
 	z-index: 0;
-    width: 690px;
+    width: 800px;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 200px;
     margin-top: 180px;
 }
 .mybox:after{
+  font-family: 'Noto Serif JP', sans-serif;
 	background-color: #fd8743; /* マステ部分の色1 */
 	background-image: linear-gradient(45deg, #fd8743 25%, transparent 25%, #fd8743 75%, #fd8743 75%, #fd8743), linear-gradient(45deg, #fd8743 25%, transparent 25%, transparent 75%, #fd8743 75%, #fd8743); /* マステ部分の色2 */
 	background-position: 0 0, 12px 12px;
@@ -540,8 +545,10 @@ footer
     height: 200px;
   }
 }
-
-
+.section-title{
+  font-family: 'Noto Serif JP', sans-serif;
+  color:  rgb(82, 59, 59);
+}
 
 /* pagetop */
 #pagetop{
