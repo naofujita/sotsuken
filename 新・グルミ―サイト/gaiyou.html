@@ -15,9 +15,28 @@
     <title>グルミーについて</title>
     <link href="css/gaiyou.css" rel="stylesheet" type="text/css">
 
-
+    <body>
+      <!-- ローディング画面 -->
+      <div class="loader-bg">
+        <div class="loader"></div>
+        
+      </div>
+      <!-- jQuery読み込み -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="script.js"></script>
+    </body>
+    
  <!-- menubar -->
  <body>
+
+   <!-- ローディング画面 -->
+   <div id="loading">
+    <!-- FontAwsomeをローディング画像に使う fa-spinを付与して回転させる-->
+    <i class="fas fa-redo-alt fa-spin"></i>
+  </div><!-- /#loading -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/gaiyou.js"></script>
+
   <header id="header">
     <h1>Gourmmy</h1>
     
@@ -105,8 +124,8 @@
 
         <h1 class="section-title"><font size="10">おいしいグルメをお届け!</font></section></main></h1>   
 
-        <div class="box5">
-            <h2 class="title">Gourmmy(グルミー)とは...</h2>
+        <div class="kakomi-kage1">
+            <h2 class="title" style="font-size: 25px;">Gourmmy(グルミー)とは...</h2>
             <p>Gourmmy(グルミー)という名前の由来は、Gourmet(グルメ)とyummy(ヤミー)を掛け合わせた造語になります。<br>
               この名前のように、より多くの方にグルメをお届けし、ヤミーと感じていただけるように、より良いサービスの提供を目標としています。<br>
               沢山の方々にご利用いただき、愛され続けるデリバリーサイトになりますように、、、♪
@@ -274,7 +293,7 @@
 
 <!-- pagetop -->
 <div id="pagetop" hidden>
-  <img class="page" src="img/page.png"  >
+  <img class="page" src="img/page.png" >
 </div>
 
 
