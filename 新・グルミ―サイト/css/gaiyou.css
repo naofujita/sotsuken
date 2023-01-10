@@ -251,7 +251,7 @@ div.center {
     text-align: center; 
   
 }
-img{
+.text-box img{
 
     vertical-align: bottom;
     width: 500px;
@@ -410,8 +410,8 @@ h2.h{
   padding: 4em;
   width: 80%;
   color: #555555; /* 文字色 */
-  background-color: rgb(233, 231, 203); /* 背景色 */
-  box-shadow: 0 0 10px 10px  rgb(233, 231, 203); /* 影 */
+  background-color: rgb(255, 254, 247); /* 背景色 */
+  box-shadow: 0 0 10px 10px  rgb(233, 223, 203); /* 影 */
  }
  .kakomi-kage1 p{
   font-family: 'Noto Serif JP', sans-serif;
@@ -546,7 +546,7 @@ footer
 }
 
 body {
-	background-image: url("https://img.tuscanyaccommodation.com/properties/casale-cardini/casale-cardini-candlelight.jpg?fit=clip&h=900");
+	background-image: url("https://stat.ameba.jp/user_images/20170303/08/serizumic/fd/5a/j/o4288284813881086785.jpg");
 	background-size: cover;
   background-attachment: fixed;
 }
@@ -558,7 +558,8 @@ body {
 #pagetop{
   position:fixed;
   right:10px;
-  bottom:10px;
+  bottom:0px;
+  padding-bottom: 0;
   cursor:pointer;
   z-index: 10;
   
