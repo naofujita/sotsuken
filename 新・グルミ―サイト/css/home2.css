@@ -789,8 +789,8 @@ footer
     position: fixed;
     top: 0;
     left: 0;
-    width: 1000vw;
-    height: 1000vh;
+    width: 300vw;
+    height: 900vh;
     background-color: #fff;
     z-index: -1;
   }
@@ -930,6 +930,8 @@ footer
    text-transform: uppercase;
    padding: 20px;
    background-color: rgb(255, 255, 255);
+   width: 1200px;
+   margin: 0  auto;
  }
 
 .out img{ 
