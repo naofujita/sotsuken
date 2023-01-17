@@ -63,11 +63,7 @@ img{
 li{
     list-style:none;
 }
-.site-title{
-    width:120px;
-    line-height: 1px;
-    padding: 10px 0;
-}
+
 .site-title a{
     display:block;
 }
@@ -293,7 +289,6 @@ nav{
     text-transform: uppercase;
     padding: 20px;
     background-color: rgb(255, 255, 255);
-    
   }
   
   h2{
@@ -356,8 +351,7 @@ Menu
     margin: 0 auto;
 }
 #bicycle li{
-    width:32%;
-   
+    width:32%; 
 }
 
 
@@ -556,7 +550,7 @@ footer
   right:10px;
   bottom:10px;
   cursor:pointer;
-  z-index: 10;
+  z-index: 1000;
 }
 
 #pagetop img{
@@ -669,3 +663,259 @@ footer
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+/*==480px以下の形状*/
+
+@media screen and (max-width:480px){
+  /* body{
+     width: 480px;
+   }
+   */
+
+   nav{
+    background:rgb(52, 73, 59);
+    color:#fff;
+    text-align: center;
+    width: 420px;
+  }
+
+  #mainvisual{
+    margin-bottom:80px;
+}
+#mainvisual img{
+    width:120%;
+    height:450px;
+    object-fit:cover;
+}
+
+  h1{
+    font-size:2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+/* 商品へのこだわり */
+.mybox p{
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 15px;
+}
+.mybox{
+	background-color: rgb(253, 248, 241);	/* 背景色 */
+	border: 1px solid #ccc; /* 線の太さ・種類・色 */
+	box-shadow:1px 1px 6px 0px #ccc;
+	-moz-box-shadow:1px 1px 6px 0px #ccc;
+	-webkit-box-shadow:1px 1px 6px 0px #ccc;
+	-o-box-shadow:1px 1px 6px 0px #ccc;
+	margin: 20px 5px; /* 外側の余白 上下・左右 */
+	padding: 30px 20px 20px 20px; /* 内側の余白 上・右・下・左 */
+	position: relative;
+	z-index: 0;
+    width: 350px;
+    height: 330px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    margin-top: 180px;
+
+}
+.mybox:after{
+  font-family: 'Noto Serif JP', sans-serif;
+	background-color: #fd8743; /* マステ部分の色1 */
+	background-image: linear-gradient(45deg, #fd8743 25%, transparent 25%, #fd8743 75%, #fd8743 75%, #fd8743), linear-gradient(45deg, #fd8743 25%, transparent 25%, transparent 75%, #fd8743 75%, #fd8743); /* マステ部分の色2 */
+	background-position: 0 0, 12px 12px;
+	background-size: 14px 14px;
+	border-left: 2px dotted rgba(255,255,255,0.9);
+	border-right: 2px dotted rgba(255,255,255,0.9);
+	box-shadow: 0 0 5px rgba(255,255,255,0.5);
+	content: '商品へのこだわり';
+	display: block;
+	margin: 0 0 10px 0;
+	padding: 5px 20px;
+	color: #fff;  /* マステ部分文字色 */
+	text-align: center;
+	position: absolute;
+	top: -10px;
+	left: 20px;
+	transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+}
+
+
+div.box{
+  background: rgba(255, 255, 255, 0.753);
+   padding-top: 80px;
+   padding-bottom: 10px;
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(5.3px);
+   -webkit-backdrop-filter: blur(5.3px);
+   border: 1px solid rgba(255, 255, 255, 0.29);
+   width: 90%;
+   margin: 0 auto;
+     padding-bottom: 90px;
+     margin-bottom: 150px;
+   }
+ 
+ .box img{
+   width: 100px;
+ }
+
+#kare li{
+  width: 100px;
+}
+
+.box li{
+  padding-bottom: 25px;
+  width: 100px;
+}
+
+#kare {
+  width: 100px;
+}
+
+.box h2{
+  font-size: 5px;
+}
+
+#bicycle{
+  font-size: 5px;
+}
+
+.me li{
+  width: 100px;
+
+}
+
+
+/*ふったー*/
+#footer06 {
+  background:rgb(52, 73, 59);
+  width: 500px;
+  height: 680px;
+}
+#footer06 .cont-wrap {
+  padding: 30px 0;
+  margin-bottom: 0;
+}
+
+.info p{
+  font-size: 2px;
+}
+
+#footer06 img{
+  padding: 0;
+  width: 200px;
+  height: 80px;
+  margin-left: 70px;
+}
+
+
+#footer06 .nav {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+}
+#footer06 .nav li {
+  border-top: 1px solid #555;
+}
+#footer06 .nav li:last-child {
+  border-bottom: 1px solid #555555;
+}
+#footer06 .nav li a {
+  display: block;
+  padding: 12px 20px;
+
+}
+#footer06 .cont-wrap .map {
+  margin-top: 30px;
+  width: 350px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+ 
+#footer06 .info .address {
+  color: #ccc;
+  padding-left: 75px;
+  font-size: 15px;
+}
+#footer06 .cont .nav a {
+  color: #ccc;
+  padding-left: 90px;
+  font-size: 15px;
+}
+.copyright p{
+  margin: 0;
+}
+.copyright{
+  margin-top: 0;
+  width: 400px;
+}
+
+
+
+/*--------------------------------------------------
+Mainvisual
+--------------------------------------------------*/
+#mainvisual img{
+  height: calc(100vh - 60px);
+}
+
+/*--------------------------------------------------
+About
+--------------------------------------------------*/
+#about .content{
+flex-direction: column;
+}
+#about img{
+margin-right:0;
+}
+
+/*--------------------------------------------------
+Menu
+--------------------------------------------------*/
+#bicycle ul{
+flex-direction: column;
+}
+#bicycle li{
+width:100%;
+margin-bottom:30px;
+}
+
+
+
+/* pagetop */
+#pagetop{
+  position:fixed;
+  bottom:10px;
+  left: 310px;
+  right: 0px;
+  cursor:pointer;
+  z-index: 10;
+  
+}
+
+#pagetop img{
+  width: 70px;
+  height: 70px;
+}
+
+#pagetop div{
+ display: block;
+ top: 730px;
+ left: 280px;
+ right: 0px;
+}
+
+
+}
+
+
+  

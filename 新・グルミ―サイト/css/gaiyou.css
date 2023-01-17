@@ -107,7 +107,7 @@ nav li.has-child ul{
   justify-content: space-between;
   flex-wrap: wrap;
     /*形状を指定*/
-    background:rgba(95, 95, 95, 0.452);
+  background:rgba(95, 95, 95, 0.452);
   width:90%;
     /*はじめは非表示*/
   visibility: hidden;
@@ -685,7 +685,7 @@ body {
    /*==ナビゲーション全体の設定*/
   nav{
     background:rgb(52, 73, 59);
-    width: 1200px;
+    width: 1450px;
     color:#fff;
     text-align: center;
   
@@ -705,7 +705,7 @@ body {
     margin-bottom: 0;
     margin-top: 0;
     line-height: 1.5;  
-    width: 1200px;
+    width: 1450px;
   }
   
   
@@ -836,7 +836,7 @@ body {
     text-transform: uppercase;
     padding: 20px;
     background-color: rgb(255, 255, 255);
-    width: 1200px;
+    width: 1450px;
     margin: 0  auto;
   }
  
@@ -893,7 +893,7 @@ div.maru{
 
 #footer06 {
   background:rgb(52, 73, 59);
-  width: 1400px;
+  width: 1450px;
   height: 1200px;
 }
 #footer06 .cont-wrap {
