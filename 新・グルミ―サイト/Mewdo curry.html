@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  
  <meta charset="utf-8">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <title>ミュードカレー</title>
  <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, minimum-scale=1.0, user-scalable=yes">
  <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
@@ -16,8 +18,9 @@
 <!-- menubar -->
 <body>
   <header id="header">
+    <div class="ore">
     <h1>Gourmmy<p style="color:  rgb(202, 93, 30);; font-size: 50px; margin-top: 5px;">Mewdo curry</p></h1>
-    
+    </div>
     <nav>
     <ul>
       <li><a href="index2.html">Home</a></li>
@@ -85,11 +88,12 @@
   <div class="box">
 <h2 class="section-title" id="menu">グランドメニュー</h2>
 <form method="post" action="../新・グルミ―サイト/php/cart.php">
+  <div class="me">
 <ul>
-  <li>
+  <li id="kare">
   <img src="img/p-ku.png" alt="テキストテキストテキスト">
   <h2 class="content-title">ポークカレー</h2><input type="hidden" name="name" value="ポークカレー">
-  <h3>480円</h3><input type="hidden" name="price" value="480">
+  <h3 id="nedan">480円</h3><input type="hidden" name="price" value="480">
   数量：<input type="text" name="num" value="0" style="width:30px;">
   <input type="submit" value="カートに入れる">
   </li>
@@ -108,6 +112,7 @@
   <input type="submit" value="カートに入れる">
   </li>
 </ul>
+  </div>
 
 <ul>
   <li>
@@ -248,7 +253,7 @@
               <div class="cont-wrap">
                 <div class="cont">
                   <div class="info">
-                    <a href="https://b-risk.jp/" class="logo">
+                    <a href="index.html" class="logo">
                       <img src="img/フッターロゴ3.png" alt=””>
                     </a>
                     <p class="address">
@@ -279,12 +284,23 @@
       
   
 
+
+  </script>
+          
+      
+    
+      
+</body>
+</html>
+
 <!-- pagetop -->
 <div id="pagetop" hidden>
-  <img class="page" src="img/page.png"  >
+  <img class="page" src="img/page.png" >
 </div>
     
-    
+
+
+
 <!-- スクロール用 -->
 <script>
   $(function(){
@@ -309,10 +325,5 @@
       return false;
     });
   });
-  </script>
-          
-      
-    
-      
-</body>
-</html>
+
+</script>
