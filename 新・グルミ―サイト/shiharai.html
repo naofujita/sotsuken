@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>お支払い方法</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="css/shiharai.css">   
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> 
+    </head>
+    <div class="bg_pattern Polka_v2"></div>
+    <body>
+    <!--<h1>お支払い方法</h1>-->
+    <h1 class="midasi"><p>――――お支払い方法――――</p></h1>
+
+    <p style="text-align : center ; font-size: 2rem; margin-top: -80px; margin-bottom: 100px ;">＜お支払い方法を選択の上、「確認画面へ」ボタンをクリックしてください。＞</p>
+    <!--<div class="box_br">
+        <h3><label><input type="radio" name="shiharai_type" value="クレジットカード" checked>クレジットカード</label></h3>
+    </div>-->
+
+    <!--<label>
+        <input class="js-check" type="radio" name="rs" value="1" onclick="formSwitch()" >クレジットカード
+    </label>
+    
+    <label>
+        <input class="js-check" type="radio" name="rs" value="1" onclick="formSwitch()" >PayPay
+    </label>-->
+    <div>  
+    <label for="menu">クレジットカード</label>
+    <input type="checkbox" id="menu" class="check" onclick="chebg('hoge1')" value="hoge1">
+
+
+    <ul class="dropdown">
+    <div class="box_con">
+    <form action="php/kakunin.php" method="post">
+    <table class="formTable">
+    <table border="2" bgcolor="#fff">
+    
+   
+    <tr>
+    <th>カード名義</th> 
+    <td><input type="text" maxlength="200" placeholder="例）GURUMI SAITO【半角】" id="name" name="name" class="wide" size="50" required/></td>
+    </tr>
+
+    <tr>
+    <th>カード番号</th>
+    <td><input size="25" type="text" class="wide" id="bangou" name="bangou"  placeholder="例）1234 5678 9123 4567【半角】" required/></td>
+    </tr>
+
+    <tr>
+    <th>カード有効期限</th>
+    <td><select>
+        <option selected="selected"></option>
+        <option>01</option>
+        <option>02</option>
+        <option>03</option>
+        <option>04</option>
+        <option>05</option>
+        <option>06</option>
+        <option>07</option>
+        <option>08</option>
+        <option>09</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+    </select>
+
+    <span>月 /</span>
+    <span>20</span>
+    <select>
+        <option selected="selected"></option>
+        <option>19</option>
+        <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+    </select>
+    <span for="expy">年</span></td>
+    </tr>
+
+    <tr>
+    <th>セキュリティコード</th>
+    <td><input type="password" id="pass" size="10" class="wide" name="pass" placeholder="例）123【半角】" required/>
+
+    <!--<div class="togglePassword">
+      <input type="password" class="hideText">
+      <input type="text" class="showText">
+      <label for="checkPassword" class="fa fa-eye"></label>
+      <label for="checkPassword" class="fa fa-eye-slash"></label>
+    </div>
+    </td></tr>-->
+    </table>
+    </table>
+    
+
+    
+
+<div class="box_check">
+    <p class="checkbox" style="margin-bottom: 1%;  margin-top: 3em;  font-size: 1rem;   transform: scale(1.5)">
+    <input type="checkbox" id="touroku" name="check" aria-invalid="false">入力確認
+</div>
+</ul>
+
+<!--<form method="" action="php/kakunin.php">-->
+<!--<label>PayPay</label>
+    <input type="checkbox" id="menu">-->
+
+    <!--<form method="" action="">-->
+    
+        <label><input class="check" type="checkbox" name="check" id="hoge" onclick="chebg('hoge')" value="hoge">d払い</label>
+        <label><input class="check" type="checkbox" name="check" id="hoge2" onclick="chebg('hoge2')" value="hoge2">PayPay</label>
+        <label><input class="check" type="checkbox" name="check" id="hoge3" onclick="chebg('hoge3')" value="hoge3">LINEPay</label>
+        <label><input class="check" type="checkbox" name="check" id="hoge4" onclick="chebg('hoge4')" value="hoge4">AmazonPay</label>
+        <label><input class="check" type="checkbox" name="check" id="hoge5" onclick="chebg('hoge5')" value="hoge5">ApplePay</label>
+        <label><input class="check" type="checkbox" name="check" id="hoge6" onclick="chebg('hoge6')" value="hoge6">キャリア決済(au,softbank)</label>
+       
+        
+    </div>    
+    <!--<div class="menu-submit">
+            <input type="submit" value="送信" />
+        </div>-->
+    <!--</form>-->
+
+    <!--<div class="box_check">
+        <p class="btn">
+        <input type="submit" id="submit" value="送信" />
+        </p>
+    </div>-->
+</form>
+<div class="box_check">
+   <p class="btn" style="margin-bottom: 10%;  margin-top: 3em;  font-size: 1.5rem;   transform: scale(1.3)">
+   <input type="submit" id="touroku" value="確認画面へ" style="font-size: 1rem;" class="btn btn-secondary" disabled>
+   </p>
+ 
+</form>
+</div>
+
+<script>           
+    document.getElementById("touroku").onclick = function() {
+    const name = document.getElementById("name").value;
+    const bangou = document.getElementById("bangou").value;
+    const pass = document.getElementById("pass").value;
+
+    var flag = 0;
+    if(name.length == 0){flag = 1;}
+    if(bangou.length == 0){ flag = 1; }
+    if(pass.length == 0){ flag = 1; }
+
+    if(flag == 1){ alert('必須項目が未記入の箇所があります'); }
+    else{
+    var regexp = /^\d{3}$/;
+    if(regexp.test(pass) != true){ alert('セキュリティコードが3桁になっていません'); flg++;}
+
+    var regexp = /^\d{16}$/;
+    if(regexp.test(bangou) != true){ alert('カード番号が16桁になっていません'); flg++;}
+    }
+    if(flg > 0){
+      document.getElementById("touroku").checked = false;
+    }else{
+       document.getElementById("submit").disabled = false;
+    }
+    };
+
+    function chebg(chkID){//タグの背景色変更
+    Myid=document.getElementById(chkID);
+    if(Myid.checked == true){
+        Myid.parentNode.style.backgroundColor = 'RGB(29, 170, 235)';
+        Myid.parentNode.style.color = '#FFFFFF'
+    }else{
+        Myid.parentNode.style.backgroundColor = 'RGB(192, 231, 218)';//背景色
+        Myid.parentNode.style.color = '#2E0000';//文字色
+    }
+  /*$('.check').on('click', function() {
+    if ($(this).prop('checked')){
+      // 一旦全てをクリアして再チェックする
+      $('.check').prop('checked', false);
+      $(this).prop('checked', true);
+    }*/
+};
+</script>
+    
+</body>
+</html>  
