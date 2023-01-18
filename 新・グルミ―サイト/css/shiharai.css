@@ -1,0 +1,207 @@
+@charset "utf-8";
+body {
+    font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	width: 100%;
+}
+
+p.kessai img {
+    width: 100px;
+    height: auto;
+    margin-left: 30px;
+    }
+
+table {
+        border-collapse: collapse;
+        margin:0 auto;
+}
+
+
+td,th{
+    border: 1px solid #ccc;
+    padding: 50px;
+}
+
+tr:hover {
+    background: #5bbef8;
+    color: #ffffff;
+}
+
+.box_con {
+    max-width: 900px;
+    margin: 0  auto;
+    
+  }
+
+  h1{
+    font-size:3rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 30px;
+    /*background-color: rgb(250, 223, 172);*/
+    /*font-family: "Times New Roman",  serif;*/
+    color: rgb(90, 24, 24);
+  }
+
+.box_br {
+    margin-left: 580px;
+    font-family: "Times New Roman",  serif;
+}
+
+.box_con form table tr textarea {
+    height: 10em;
+    
+  }
+
+  .box_con form table tr input, .box_con form table tr textarea {
+    width: 100%;
+    height: 3em;
+    padding: .5em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+.bg_pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.Polka_v2 {
+    background-image: radial-gradient(#dddddc 2px, transparent 2px), radial-gradient(#dddddc 2px, #ffffff 2px) ;
+    background-size: 40px 40px;
+    background-position: 0 0,20px 20px;
+}
+
+.box_con form table tr select {
+  width: 20%;
+  height: 3em;
+  padding: .5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*#checkPassword {
+  display: none;
+}
+.hideText, .showText {
+  border: none;
+  outline: none;
+}
+.togglePassword {
+  border: 1px solid;
+  border-collapse: collapse;
+  margin:0 auto;
+}
+.showText {
+  display: none;
+}
+.hideText {
+  display: inline;
+}
+.fa-eye:before {
+  display: inline;
+  margin-left: 5px; 
+}
+.fa-eye-slash:before {
+  display: none;
+}
+#checkPassword:checked + .togglePassword > .fa-eye:before {
+  display: none;
+}
+#checkPassword:checked + .togglePassword > .fa-eye-slash:before {
+  display: inline-block;
+}
+#checkPassword:checked + .togglePassword > .hideText {
+  display: none;
+}
+#checkPassword:checked + .togglePassword > .showText {
+  display: inline-block;
+}*/
+
+.btn input {
+  height: 60px;
+  width: 220px;
+  font-size: 18px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #2e0000;      /*--文字------*/
+  border: solid 2px #fffdf7;   /*--枠------*/
+  border-radius: 10px;
+  transition: .4s;
+  background: #f6b483;
+}
+.btn input:hover {
+  background: #ffffff;
+  color: #2e0000;
+  border: solid 2px #ff8800;
+}
+
+.btn {
+	text-align: center;
+  }
+
+  .checkbox {
+    text-align: center;
+    }
+
+    .dropdown{
+      display:none;
+    }
+    
+    label,
+    li{
+      display:block;
+      padding:2em;
+      background:rgb(192, 231, 218);
+      border-bottom:#fff 1px solid;
+      font-family:sans-serif;
+      letter-spacing:.05em;
+      font-weight:bold;
+      width: 1000px;
+      margin-left: 400px;
+      text-align: center;
+    }
+    /*li:hover,
+    label:hover{
+      background:rgb(2, 155, 28);
+    }*/
+    li::before,
+    label::before{
+      /*content:""*/
+      display:block;
+      position:absolute;
+      
+      right:5%;
+      width:.5em;
+      height:.5em;
+      border-top:#000 2px solid;
+      border-left:#000 2px solid;
+      transform:rotate(135deg);
+    }
+    input[class="check"]{
+      display:none;
+    }
+    label[for="menu"]{
+      display:block;
+      background:rgb(192, 231, 218);
+    }
+    label[for="menu"]::before{
+      transform:rotate(225deg);
+    }
+    #menu:checked + .dropdown{
+      display:block;
+    }
+    
+    
+     
+       
+      
