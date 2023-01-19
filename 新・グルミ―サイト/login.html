@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="ja">
-  
-  <form method="post" action="login.php">
 <head>
 <meta charset="utf-8">
 <title>サインイン</title>
@@ -40,7 +38,6 @@
               </dl></a></li>
 
         </ul>!-->
-      </li>
 
       <li><a href="gaiyou.html">Overview</a></li>
       <li><a href="toiawase.html">Contact</a></li>
@@ -80,20 +77,7 @@
     
   </header>
         
-    <html>
-</html>
-<br>
-<br>
-<br>
-
-<html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/login.css">
-
-    <title>Login</title>
-</head>
-<body>
+  <form method="post" action="php/login.php">
 <div class="login-wrap">
     <div class="login-html">
       <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
@@ -125,22 +109,22 @@
           <a class="aka" href="aka.html">アカウントをお持ちでない方</a>
           
         </div>
-        <div class="sign-up-htm">
+        <!--<div class="sign-up-htm">
           <div class="group">
             <label for="user" class="label">Username</label>
-            <input id="user" type="text" class="input">
+            <input id="user" type="text" class="input" name="user">
           </div>
           <div class="group">
             <label for="pass" class="label">Password</label>
-            <input id="pass" type="password" class="input" data-type="password">
+            <input id="pass" type="password" class="input" data-type="password" name="pass">
           </div>
           <div class="group">
             <label for="pass" class="label">Repeat Password</label>
-            <input id="pass" type="password" class="input" data-type="password">
+            <input id="repass" type="password" class="input" data-type="password">
           </div>
           <div class="group">
             <label for="pass" class="label">Email Address</label>
-            <input id="pass" type="text" class="input">
+            <input id="mail" type="text" class="input" name="mail">
           </div>
           <div class="group">
             <input type="submit" class="button" value="Sign Up">
@@ -149,10 +133,10 @@
           <div class="foot-lnk">
             <label for="tab-1">Already Member?</label>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
-</body>
 </form>
+</body>
 </html>
