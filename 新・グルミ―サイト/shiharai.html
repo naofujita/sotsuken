@@ -31,19 +31,19 @@
 
     <ul class="dropdown">
     <div class="box_con">
-    <form action="php/kakunin.php" method="post">
+    <form action="php/thank.php" method="post">
     <table class="formTable">
     <table border="2" bgcolor="#fff">
     
    
     <tr>
     <th>カード名義</th> 
-    <td><input type="text" maxlength="200" placeholder="例）GURUMI SAITO【半角】" id="name" name="name" class="wide" size="50" required/></td>
+    <td><input type="text" maxlength="200" placeholder="GURUMI SAITO【半角】" id="name" name="name" class="wide" size="50" required/></td>
     </tr>
 
     <tr>
     <th>カード番号</th>
-    <td><input size="25" type="text" class="wide" id="bangou" name="bangou"  placeholder="例）1234 5678 9123 4567【半角】" required/></td>
+    <td><input size="25" type="text" class="wide" id="bangou" name="bangou"  placeholder="1234 5678 9123 4567【半角】" required/></td>
     </tr>
 
     <tr>
@@ -86,7 +86,7 @@
 
     <tr>
     <th>セキュリティコード</th>
-    <td><input type="password" id="pass" size="10" class="wide" name="pass" placeholder="例）123【半角】" required/>
+    <td><input type="password" id="pass" size="10" class="wide" name="pass" placeholder="123【半角】" required/>
 
     <!--<div class="togglePassword">
       <input type="password" class="hideText">
@@ -113,11 +113,80 @@
 
     <!--<form method="" action="">-->
     
-        <label><input class="check" type="checkbox" name="check" id="hoge" onclick="chebg('hoge')" value="hoge">d払い</label>
-        <label><input class="check" type="checkbox" name="check" id="hoge2" onclick="chebg('hoge2')" value="hoge2">PayPay</label>
-        <label><input class="check" type="checkbox" name="check" id="hoge3" onclick="chebg('hoge3')" value="hoge3">LINEPay</label>
-        <label><input class="check" type="checkbox" name="check" id="hoge4" onclick="chebg('hoge4')" value="hoge4">AmazonPay</label>
+       <label for="menu4">PayPay</label>
+    <input type="checkbox" id="menu4" class="check" onclick="chebg('hoge2')" value="hoge2">
+
+
+    <ul class="dropdown">
+    <div class="box_con">
+    <table class="formTable">
+    <table border="2" bgcolor="#fff">
+    
+   
+    <tr>
+    <th>携帯電話番号</th> 
+    <td><input type="text" maxlength="200" placeholder="ハイフンなし" id="tel" name="tel" class="wide" size="55" required/></td>
+    </tr>
+
+    <tr>
+    <th>パスワード</th>
+    <td><input size="25" type="password" class="wide" id="paypaypass" name="paypaypass"  placeholder="半角英数8文字以上" required/></td>
+    </tr>
+
+    </table>
+    </table>
+    </div>
+    </ul>
+
+    <div>
+        <label for="menu3">LINEPay</label>
+        <input type="checkbox" id="menu3" class="check" onclick="chebg('hoge3')" value="hoge3">
+    
+         <ul class="dropdown">
+        <div class="box_con">
+        <table class="formTable">
+        <table border="2" bgcolor="#fff">
+    
+        <tr>
+        <th>ログインID</th> 
+        <td><input type="text" maxlength="200" placeholder="" id="mail" name="mail" class="wide" size="60" required/></td>
+        </tr>
+      
+        <tr>
+        <th>パスワード</th>
+        <td><input size="25" type="password" class="wide" id="linepass" name="linepass"  placeholder="半角英数8文字以上" required/></td>
+        </tr>
+        </table>
+        </table>
+        </div>
+        </ul>
+
+    <div>
+    <label for="menu2">AmazonPay</label>
+    <input type="checkbox" id="menu2" class="check" onclick="chebg('hoge4')" value="hoge4">
+
+     <ul class="dropdown">
+    <div class="box_con">
+    <table class="formTable">
+    <table border="2" bgcolor="#fff">
+
+    <tr>
+    <th>メールアドレス</th> 
+    <td><input type="text" maxlength="200" placeholder="gourmmy@mail.com" id="mail" name="mail" class="wide" size="50" required/></td>
+    </tr>
+  
+    <tr>
+    <th>Amazonのパスワード</th>
+    <td><input size="25" type="password" class="wide" id="amazonpass" name="amazonpass"  placeholder="半角英数8文字以上" required/></td>
+    </tr>
+    </table>
+    </table>
+    </div>
+    </ul>
+
+
         <label><input class="check" type="checkbox" name="check" id="hoge5" onclick="chebg('hoge5')" value="hoge5">ApplePay</label>
+        <label><input class="check" type="checkbox" name="check" id="hoge" onclick="chebg('hoge')" value="hoge">d払い</label>
         <label><input class="check" type="checkbox" name="check" id="hoge6" onclick="chebg('hoge6')" value="hoge6">キャリア決済(au,softbank)</label>
        
         
@@ -133,11 +202,17 @@
         </p>
     </div>-->
 </form>
-<div class="box_check">
+<!--<div class="box_check">
    <p class="btn" style="margin-bottom: 10%;  margin-top: 3em;  font-size: 1.5rem;   transform: scale(1.3)">
-   <input type="submit" id="touroku" value="確認画面へ" style="font-size: 1rem;" class="btn btn-secondary" disabled>
+   <span><a href="../thank.html"><input type="submit" id="submit" value="確認画面へ" style="font-size: 1rem;" class="btn btn-secondary" disabled></a></span>
    </p>
- 
+</div>-->
+
+<h1>
+    <div class="btn" style="margin-top:20px;  margin-bottom: 10%;    font-size: 2rem;   transform: scale(1.5)">
+    <span><a href="thank.html"><input type="submit" value="注文確定" id="subm" /></a></span>
+    </div>
+
 </form>
 </div>
 
@@ -167,7 +242,7 @@
     }
     };
 
-    function chebg(chkID){//タグの背景色変更
+    /*function chebg(chkID){//タグの背景色変更
     Myid=document.getElementById(chkID);
     if(Myid.checked == true){
         Myid.parentNode.style.backgroundColor = 'RGB(29, 170, 235)';
@@ -181,8 +256,8 @@
       // 一旦全てをクリアして再チェックする
       $('.check').prop('checked', false);
       $(this).prop('checked', true);
-    }*/
-};
+    }
+};*/
 </script>
     
 </body>
