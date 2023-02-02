@@ -201,7 +201,35 @@ tr:hover {
       display:block;
     }
     
-    
+    label[for="menu2"]{
+      display:block;
+      background:rgb(192, 231, 218);
+    }
+    label[for="menu2"]::before{
+      transform:rotate(225deg);
+    }
+    #menu2:checked + .dropdown{
+      display:block;
+    }  
      
-       
+    label[for="menu3"]{
+      display:block;
+      background:rgb(192, 231, 218);
+    }
+    label[for="menu3"]::before{
+      transform:rotate(225deg);
+    }
+    #menu3:checked + .dropdown{
+      display:block;
+    }      
       
+    label[for="menu4"]{
+      display:block;
+      background:rgb(192, 231, 218);
+    }
+    label[for="menu4"]::before{
+      transform:rotate(225deg);
+    }
+    #menu4:checked + .dropdown{
+      display:block;
+    }   
