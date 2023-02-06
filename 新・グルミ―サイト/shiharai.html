@@ -8,7 +8,8 @@
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> 
     </head>
     <div class="bg_pattern Polka_v2"></div>
-    <body>
+
+   <body>
     <!--<h1>お支払い方法</h1>-->
     <h1 class="midasi"><p>――――お支払い方法――――</p></h1>
 
@@ -118,7 +119,7 @@
 
 
     <ul class="dropdown">
-    <div class="box_con">
+    <div class="box_con2">
     <table class="formTable">
     <table border="2" bgcolor="#fff">
     
@@ -227,13 +228,15 @@
     if(bangou.length == 0){ flag = 1; }
     if(pass.length == 0){ flag = 1; }
 
-    if(flag == 1){ alert('必須項目が未記入の箇所があります'); }
+    if(flag == 1){ alert('必須項目が未記入の箇所があります'); return false; }
     else{
+    flag_chk = 0;
     var regexp = /^\d{3}$/;
-    if(regexp.test(pass) != true){ alert('セキュリティコードが3桁になっていません'); flg++;}
-
+    if(regexp.test(pass) != true){ alert('セキュリティコードが3桁になっていません'); return false; flg++;}
+    flag_chk = 0;
     var regexp = /^\d{16}$/;
-    if(regexp.test(bangou) != true){ alert('カード番号が16桁になっていません'); flg++;}
+    if(regexp.test(bangou) != true){ alert('カード番号が16桁になっていません'); return false; flg++;}
+    flag_chk = 0;
     }
     if(flg > 0){
       document.getElementById("touroku").checked = false;
