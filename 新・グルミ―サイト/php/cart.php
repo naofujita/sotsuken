@@ -29,7 +29,7 @@ if(isset($_POST['id']))
     $num=$_SESSION['num'];
     if(in_array($p_id,$id)==true)
     {
-      $alert = "<script type='text/javascript'>alert('その商品はすでにカートに入っています。');</script>";
+      $alert = "<script type='text/javascript'>alert('その商品はすでにカートに入っています');</script>";
       print $alert;
       $flag1=true;
     }
