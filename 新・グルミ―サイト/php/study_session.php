@@ -3,39 +3,61 @@
 
     
     //usernameとかを入力しているか
-    if(isset($_POST["username"]) && isset($_POST["pass"])){
+    if(!($_POST["username"]=="") && !($_POST["pass"]=="")){
+        //入力値を取得する
+        $siteuser = $_POST["username"];
+        $pass = $_POST["pass"];
+
+/************************************************************
+ * ここでデータベースに接続、問い合わせ
+*************************************************************/
+
+        //データベース接続
+        $dsn = 'mysql:dbname=gourmmy;host=localhost';
+        $user = 'root';
+        $password = '';
+        
         try{
-            //ここでデータベースから問い合わせるといいですよん
-            $users = ["morioka","admin"];
-            $passes = ["morimori","admin"];
-
-            //入力値を取得する
-            $user = $_POST["username"];
-            $pass = $_POST["pass"];
-
-            //usernameとpasswordの組みが正しいかチェックする
-            for($i = 0;$i < count($users);$i++){
-                //正しくてかつログインのセッションが開始されていなければ、セッション開始
-                if($users[$i] == $user && $passes[$i] == $pass && $_SESSION["login"] == false){
-                    $_SESSION['login']=true;
-                    $_SESSION["user"] = $user;
-                    break;
-                }
+            $dbh = new PDO($dsn, $user, $password);
+            //SELECT *(全ての行のこと) FROM テーブル名 WHERE 詳細条件
+            $sql = "SELECT name FROM member WHERE name='".$siteuser."' and pass='".$pass."'";
+            //SQLインジェクション対策
+            $stmt = $dbh->prepare($sql);
+            $stmt -> execute();
+            // foreach文で配列の中身を一行ずつ出力
+            foreach ($stmt as $row) {
+                // データベースのフィールド名で出力
+                $res = $row['name'];
             }
-            if(!isset($_SESSION["user"])){
-                print("正しく入力してください");
-            }
-        }catch(IOException $e){
-            print("もう一度入力してください");
-        }   
+        }catch(PDOException $e){
+            print('Error:'.$e->getMessage());
+            die();
+        }
+        $dbh = null;
+
+/*************************************************************/
+
+        //正しくてかつログインのセッションが開始されていなければ、セッション開始
+        if($siteuser == $res){
+            $_SESSION['login']=true;
+            $_SESSION["user"] = $siteuser;
+        }else{
+            print("正しく入力してください");
+        }
+    }else{
+        //どこが空か探す
+        if($_POST["username"]=="" && $_POST["pass"] == ""){
+            print("ユーザー名,パスワードを入力してください");
+        }else if($_POST["username"] == ""){
+            print("ユーザー名を入力してください");
+        }else{
+            print("パスワードを入力してください");
+        }
     }
     //ログアウトを押されたときにセッションをなくす
     if(isset($_POST['logout'])==true){
         $_SESSION=[];
-    }
-    
-    
-    
+    }    
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -56,7 +78,7 @@
             print('<input type="submit" name="logout" value="ログアウト"><br>');
             //COOKIEは端末で保持するSESSIONIDのこと
             //SESSIONIDはサーバーで保存で、Cookieは端末で保存する
-            print("session_id:" . $_COOKIE[session_name()]);
+            print("session_id:" . $_COOKIE[session_name()] . "<br>");
         }
     ?>
     </form>

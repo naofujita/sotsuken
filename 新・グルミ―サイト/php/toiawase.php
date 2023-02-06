@@ -14,7 +14,7 @@
                 <li><a href="index.html">HOME</a></li>
 				<li><a href="gaiyou.html">Gourmmyについて</a></li>
                 <li><a href="toiawase2.html">問い合わせ</a></li>
-				<li><a href="login.html">サインイン</a></li>
+				<li><a href="./login.php">サインイン</a></li>
            </ul>
          </nav>
         </header>

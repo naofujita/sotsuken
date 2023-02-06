@@ -39,7 +39,7 @@
                 <li><a href="../index.html">HOME</a></li>
 				<li><a href="../gaiyou.html">Gourmmyについて</a></li>
                 <li><a href="../toiawase.html">問い合わせ</a></li>
-				<li><a href="../login.html">サインイン</a></li>
+				<li><a href="./login.php">サインイン</a></li>
             </ul>
         </nav>
     </header> 
@@ -178,7 +178,7 @@ ul{
         
     <h1>
     <div class="btn" style="margin-top:20px;  margin-bottom: 20%;    font-size: 2rem;   transform: scale(1.5)">
-    <span><a href="../login.html"><input type="submit" value="サインインへ" id="subm" /></a></span>
+    <span><a href="./login.php"><input type="submit" value="サインインへ" id="subm" /></a></span>
     </div>
 </div>
 </body>
