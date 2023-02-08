@@ -93,23 +93,24 @@
   <li id="kare">
   <img src="img/p-ku.png" alt="テキストテキストテキスト">
   <h2 class="content-title">ポークカレー</h2><input type="hidden" name="name" value="ポークカレー">
-  <h3 id="nedan">480円</h3><input type="hidden" name="price" value="480">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3 id="nedan">480円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
   <img src="img/bi-fu.png" alt="テキストテキストテキスト">
   <h2 class="content-title">ビーフカレー</h2><input type="hidden" name="name" value="ビーフカレー">
-  <h3>570円</h3><input type="hidden" name="price" value="570">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>570円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
   <img src="img/tikinkatu.png" alt="テキストテキストテキスト">
   <h2 class="content-title">チキンカツカレー</h2><input type="hidden" name="name" value="チキンカツカレー">
-  <h3>650円</h3><input type="hidden" name="price" value="650">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>650円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
+    
+</div>
   </li>
 </ul>
   </div>
@@ -118,47 +119,79 @@
   <li>
   <img src="img/ro-sukatu.png" alt="テキストテキストテキスト">
   <h2 class="content-title">ロースカツカレー</h2><input type="hidden" name="name" value="ロースカツカレー">
-  <h3>690円</h3><input type="hidden" name="price" value="690">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>690円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
   <img src="img/hanba-gu.png" alt="テキストテキストテキスト">
   <h2 class="content-title">ハンバーグカレー</h2><input type="hidden" name="name" value="ハンバーグカレー">
-  <h3>700円</h3><input type="hidden" name="price" value="700">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>700円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
   <img src="img/ti-zukatu.png" alt="テキストテキストテキスト">
   <h2 class="content-title">チーズカレー</h2><input type="hidden" name="name" value="チーズカレー">
-  <h3>590円</h3><input type="hidden" name="price" value="590">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>590円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
 </ul>
 
 <ul>
   <li>
-  <img src="img/korokke.png" alt="テキストテキストテキスト">
+    <div class="pu-box">
+      <label for="pu-on">
+        <div class="btn-open">
+          <img src="img/korokke.png">
+        </div>
+      </label>
+      <input type="checkbox" id="pu-on">
+      <div class="pu">
+        <label for="pu-on" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>コロッケカレー</p>
+          <img src="img/korokke.png" style="width: 250px;">
+          <p>カレーに国産あいびきミンチを使ったにコロッケが乗っています。</p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
   <h2 class="content-title">コロッケカレー</h2><input type="hidden" name="name" value="コロッケカレー">
-  <h3>580円</h3><input type="hidden" name="price" value="580">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>580円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
-  <img src="img/mentikatu2.png" alt="テキストテキストテキスト">
+    <div class="pu-box">
+      <label for="pu-on">
+        <div class="btn-open">
+          <img src="img/mentikatu2.png">
+        </div>
+      </label>
+      <input type="checkbox" id="pu-on">
+      <div class="pu">
+        <label for="pu-on" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>メンチカツカレー</p>
+          <img src="img/mentikatu2.png" style="width: 250px;">
+          <p>カレーに国産あいびきミンチを使ったにコロッケが乗っています。</p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
   <h2 class="content-title">メンチカツカレー</h2><input type="hidden" name="name" value="メンチカツカレー">
-  <h3>670円</h3><input type="hidden" name="price" value="670">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>670円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
   <img src="img/karaage.png" alt="テキストテキストテキスト">
   <h2 class="content-title">からあげカレー</h2><input type="hidden" name="name" value="からあげカレー">
-  <h3>590円</h3><input type="hidden" name="price" value="590">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>590円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
 </ul>
 
@@ -166,23 +199,22 @@
   <li>
   <img src="img/hayasiraisu.png" alt="テキストテキストテキスト">
   <h2 class="content-title">ハヤシライス</h2><input type="hidden" name="name" value="ハヤシライス">
-  <h3>620円</h3><input type="hidden" name="price" value="620">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>620円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
     <img src="img/yasai.png" alt="テキストテキストテキスト">
     <h2 class="content-title">野菜カレー</h2><input type="hidden" name="name" value="野菜カレー">
-    <h3>660円</h3><input type="hidden" name="price" value="660">
-    数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+    <h3>660円</h3><div class="spinner_area">
+      数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
     </li>
+
   <li>
     <img src="img/mix.png" alt="テキストテキストテキスト">
     <h2 class="content-title">ミックスカレー</h2><input type="hidden" name="name" value="ミックスカレー">
-    <h3>800円</h3><input type="hidden" name="price" value="800">
-    数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+    <h3>800円</h3><div class="spinner_area">
+      数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
     </li>
 </ul>
 </section>
@@ -198,23 +230,22 @@
   <li>
   <img src="img/u-ron.png" alt="テキストテキストテキスト">
   <h2 class="content-title">ウーロン茶</h2><input type="hidden" name="name" value="ウーロン茶">
-  <h3>180円</h3><input type="hidden" name="price" value="180">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>180円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
   <img src="img/aisuko-hi-.png" alt="テキストテキストテキスト">
   <h2 class="content-title">アイスコーヒー</h2><input type="hidden" name="name" value="アイスコーヒー">
-  <h3>180円</h3><input type="hidden" name="price" value="180">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>180円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
   <img src="img/hottoko-hi-.png" alt="テキストテキストテキスト">
   <h2 class="content-title">ホットコーヒー</h2><input type="hidden" name="name" value="ホットコーヒー">
-  <h3>120円</h3><input type="hidden" name="price" value="120">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>120円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
 </ul>
 
@@ -222,23 +253,22 @@
   <li>
   <img src="img/aisumilk.png" alt="テキストテキストテキスト">
   <h2 class="content-title">アイスミルク</h2><input type="hidden" name="name" value="アイスミルク">
-  <h3>180円</h3><input type="hidden" name="price" value="180">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>180円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
   <img src="img/kokako-ra.png" alt="テキストテキストテキスト">
   <h2 class="content-title">コカ・コーラ</h2><input type="hidden" name="name" value="コカ・コーラ">
-  <h3>180円</h3><input type="hidden" name="price" value="180">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>180円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
+
   <li>
   <img src="img/orennji.png" alt="テキストテキストテキスト">
   <h2 class="content-title">オレンジジュース</h2><input type="hidden" name="name" value="オレンジジュース">
-  <h3>180円</h3><input type="hidden" name="price" value="180">
-  数量：<input type="text" name="num" value="0" style="width:30px;">
-  <input type="submit" value="カートに入れる">
+  <h3>180円</h3><div class="spinner_area">
+    数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
 </ul>
 </form>
