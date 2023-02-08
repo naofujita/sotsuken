@@ -665,6 +665,36 @@ footer
 }
 
 
+.btnspinner{
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+}
+
+.spinner_area input{
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+  width: 70px;
+  height: 20px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  /* デフォルトのスピナーを消す */
+  -webkit-appearance: none;
+  -moz-appearance:textfield;
+}
+
+.btnspinner input{
+width: 20px;
+}
+
+.spinner_area input[type="button"]{
+  cursor: pointer;
+}
 
 
 
@@ -941,3 +971,60 @@ margin-bottom:30px;
   }
 
   
+
+  /* ポップアップウインドウの設定 */
+.pu {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 30%;
+  overflow-y: scroll;
+}
+
+/* チェックボックスの初期設定 */
+#pu-on{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#pu-on:checked + .pu{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close{
+  background: #000;
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+}
+
+/* 開くボタン */
+.btn-open{
+  background: #fff;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 95%;
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.pu-content{
+  margin: 40px auto 40px auto;
+  width: 90%;
+  font-size: 20px;
+  font-family: 'Noto Serif JP', sans-serif;
+}
+
