@@ -418,3 +418,20 @@ nav{
     margin: 80px;
   }
 
+  .btn-flat-double-border {
+    display: block;
+    width: 25em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background-color: #cdee11;
+    color: #0c0c0c;
+    border: double 4px #070707;
+    border-radius: 3px;
+    transition: .4s;
+    text-align: center;
+  }
+  .btn-flat-double-border:hover {
+    
+    color:#cdee11;
+    background: #474b33;
+  }
