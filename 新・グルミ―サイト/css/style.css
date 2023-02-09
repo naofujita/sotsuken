@@ -372,8 +372,9 @@ div.box{
 .box img{
   width: 200px;
 }
-
-
+mark {
+  background: linear-gradient(transparent 80%, yellow 0%);
+}
 
 /*--------------------------------------------------
 SP
@@ -947,29 +948,30 @@ margin-bottom:30px;
 
 }
 
-.btn input {
-  height: 60px;
-  width: 220px;
-  font-size: 18px;
-  display: inline-block;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  color: #2e0000;      /*--文字------*/
-  border: solid 2px #fffdf7;   /*--枠------*/
-  border-radius: 10px;
-  transition: .4s;
-  background: #f6b483;
-}
-.btn input:hover {
-  background: #ffffff;
-  color: #2e0000;
-  border: solid 2px #ff8800;
-}
-
 .btn {
 	text-align: center;
   }
-
+  .btn input {
+	display: inline-block;
+	background: #fd953f;
+	padding: .6em 4em;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 0;
+	/*-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-webkit-transition: all 0.4s;*/
+	transition: all 0.5s;
+  }
+  .btn input:hover {
+	/*filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);*/
+	background-color: #fd953f;
+	color: rgb(46, 58, 61);
+	/*opacity: 0.7;*/
+  }
   
 
   /* ポップアップウインドウの設定 */
@@ -1000,7 +1002,7 @@ margin-bottom:30px;
 
 /* 閉じるアイコン（右上） */
 .icon-close{
-  background: #000;
+  background: #3f1e00;
   color: #fff;
   font-size: 30px;
   padding: 0 10px;
@@ -1028,3 +1030,146 @@ margin-bottom:30px;
   font-family: 'Noto Serif JP', sans-serif;
 }
 
+/* ポップアップウインドウの設定 */
+.pu {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(119, 118, 118, 0.753);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 30%;
+  overflow-y: scroll;
+}
+
+/* チェックボックスの初期設定 */
+#menti{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#menti:checked + .pu{
+  display: block;
+}
+
+
+/* チェックボックスの初期設定 */
+#poku{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#poku:checked + .pu{
+  display: block;
+}
+
+/* チェックボックスの初期設定 */
+#bi{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#bi:checked + .pu{
+  display: block;
+}
+
+/* チェックボックスの初期設定 */
+#tiki{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#tiki:checked + .pu{
+  display: block;
+}
+
+/* チェックボックスの初期設定 */
+#ro{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#ro:checked + .pu{
+  display: block;
+}
+
+/* チェックボックスの初期設定 */
+#ha{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#ha:checked + .pu{
+  display
+  
+  : block;
+}
+
+/* チェックボックスの初期設定 */
+#ti{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#ti:checked + .pu{
+  display
+  
+  : block;
+}
+
+/* チェックボックスの初期設定 */
+#ka{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#ka:checked + .pu{
+  display
+  
+  : block;
+}
+
+/* チェックボックスの初期設定 */
+#ya{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#ya:checked + .pu{
+  display
+  
+  : block;
+}
+
+/* チェックボックスの初期設定 */
+#yasai{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#yasai:checked + .pu{
+  display
+  
+  : block;
+}
+
+/* チェックボックスの初期設定 */
+#mix{
+  display: none;
+}
+
+/* チェックされたらポップアップウインドウを開く */
+#mix:checked + .pu{
+  display
+  
+  : block;
+}
+
+
+.example {
+  box-shadow: 10px 15px 20px -10px;color: #747474;
+}

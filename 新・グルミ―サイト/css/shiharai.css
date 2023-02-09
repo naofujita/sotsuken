@@ -126,28 +126,31 @@ tr:hover {
   display: inline-block;
 }*/
 
-.btn input {
-  height: 60px;
-  width: 220px;
-  font-size: 18px;
-  display: inline-block;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  color: #2e0000;      /*--文字------*/
-  border: solid 2px #fffdf7;   /*--枠------*/
-  border-radius: 10px;
-  transition: .4s;
-  background: #f6b483;
-}
-.btn input:hover {
-  background: #ffffff;
-  color: #2e0000;
-  border: solid 2px #ff8800;
-}
-
 .btn {
 	text-align: center;
   }
+  .btn input {
+	display: inline-block;
+	background: #fd953f;
+	padding: .6em 4em;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 0;
+	/*-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-webkit-transition: all 0.4s;*/
+	transition: all 0.5s;
+  }
+  .btn input:hover {
+	/*filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);*/
+	background-color: #fd953f;
+	color: rgb(46, 58, 61);
+	/*opacity: 0.7;*/
+  }
+  
 
   .checkbox {
     text-align: center;
