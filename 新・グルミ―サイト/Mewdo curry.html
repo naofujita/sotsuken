@@ -89,23 +89,82 @@
 <h2 class="section-title" id="menu">グランドメニュー</h2>
 <form method="post" action="../新・グルミ―サイト/php/cart.php">
   <div class="me">
+
+
 <ul>
   <li id="kare">
-  <img src="img/p-ku.png" alt="テキストテキストテキスト">
+    <div class="pu-box">
+      <label for="poku">
+        <div class="btn-open">
+          <img src="img/p-ku.png" class="example">
+        </div>
+      </label>
+      <input type="checkbox" id="poku">
+      <div class="pu">
+        <label for="poku" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>ポークカレー</p>
+          <img src="img/p-ku.png" style="width: 250px;">
+          <p>シンプルな基本のポークカレー。<br>
+            <br>
+            アレルギー：<mark>乳・小麦・ピーナッツ・牛肉・豚肉・りんご・大豆</mark></p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
   <h2 class="content-title">ポークカレー</h2><input type="hidden" name="name" value="ポークカレー">
   <h3 id="nedan">480円</h3><div class="spinner_area">
     数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
 
+
   <li>
-  <img src="img/bi-fu.png" alt="テキストテキストテキスト">
+   <div class="pu-box">
+      <label for="bi">
+        <div class="btn-open">
+          <img src="img/bi-fu.png"class="example">
+        </div>
+      </label>
+      <input type="checkbox" id="bi">
+      <div class="pu">
+        <label for="bi" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>ビーフカレー</p>
+          <img src="img/bi-fu.png" style="width: 250px;">
+          <p>国産牛を使ったビーフカレー。<br>
+            <br>
+            アレルギー：<mark>乳・小麦・ピーナッツ・牛肉・豚肉・りんご・大豆</mark></p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
   <h2 class="content-title">ビーフカレー</h2><input type="hidden" name="name" value="ビーフカレー">
   <h3>570円</h3><div class="spinner_area">
     数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
 
+
   <li>
-  <img src="img/tikinkatu.png" alt="テキストテキストテキスト">
+   <div class="pu-box">
+      <label for="tiki">
+        <div class="btn-open">
+          <img src="img/tikinkatu.png" class="example">
+        </div>
+      </label>
+      <input type="checkbox" id="tiki">
+      <div class="pu">
+        <label for="tiki" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>チキンカツカレー</p>
+          <img src="img/tikinkatu.png" style="width: 250px;">
+          <p>ポークカレーに揚げたてのチキンカツを乗せています。</p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
   <h2 class="content-title">チキンカツカレー</h2><input type="hidden" name="name" value="チキンカツカレー">
   <h3>650円</h3><div class="spinner_area">
     数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
@@ -117,21 +176,72 @@
 
 <ul>
   <li>
-  <img src="img/ro-sukatu.png" alt="テキストテキストテキスト">
+    <div class="pu-box">
+      <label for="ro">
+        <div class="btn-open">
+          <img src="img/ro-sukatu.png" class="example">
+        </div>
+      </label>
+      <input type="checkbox" id="ro">
+      <div class="pu">
+        <label for="ro" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>ロースカツカレー</p>
+          <img src="img/ro-sukatu.png" style="width: 250px;">
+          <p>ポークカレーに厚みのあるロースかつ乗せています。</p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
   <h2 class="content-title">ロースカツカレー</h2><input type="hidden" name="name" value="ロースカツカレー">
   <h3>690円</h3><div class="spinner_area">
     数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
 
   <li>
-  <img src="img/hanba-gu.png" alt="テキストテキストテキスト">
+    <div class="pu-box">
+      <label for="ha">
+        <div class="btn-open">
+          <img src="img/hanba-gu.png" class="example">
+        </div>
+      </label>
+      <input type="checkbox" id="ha">
+      <div class="pu">
+        <label for="ha" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>ハンバーグカレー</p>
+          <img src="img/hanba-gu.png" style="width: 250px;">
+          <p>ポークカレーに国産あいびきミンチを使用したハンバーグを乗せています。</p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
   <h2 class="content-title">ハンバーグカレー</h2><input type="hidden" name="name" value="ハンバーグカレー">
   <h3>700円</h3><div class="spinner_area">
     数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
 
   <li>
-  <img src="img/ti-zukatu.png" alt="テキストテキストテキスト">
+    <div class="pu-box">
+      <label for="ti">
+        <div class="btn-open">
+          <img src="img/ti-zukatu.png" class="example">
+        </div>
+      </label>
+      <input type="checkbox" id="ti">
+      <div class="pu">
+        <label for="ti" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>チーズカレー</p>
+          <img src="img/ti-zukatu.png" style="width: 250px;">
+          <p>ポークカレーにとろけるチーズを乗せています。</p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
   <h2 class="content-title">チーズカレー</h2><input type="hidden" name="name" value="チーズカレー">
   <h3>590円</h3><div class="spinner_area">
     数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
@@ -143,7 +253,7 @@
     <div class="pu-box">
       <label for="pu-on">
         <div class="btn-open">
-          <img src="img/korokke.png">
+          <img src="img/korokke.png"class="example">
         </div>
       </label>
       <input type="checkbox" id="pu-on">
@@ -153,7 +263,7 @@
         <div class="pu-content">
           <p>コロッケカレー</p>
           <img src="img/korokke.png" style="width: 250px;">
-          <p>カレーに国産あいびきミンチを使ったにコロッケが乗っています。</p>
+          <p>カレーに国産あいびきミンチを使ったにコロッケを乗せています。</p>
           <!-- ./ポップアップの中身　ここまで -->
         </div>
       </div>
@@ -165,19 +275,19 @@
 
   <li>
     <div class="pu-box">
-      <label for="pu-on">
+      <label for="menti">
         <div class="btn-open">
-          <img src="img/mentikatu2.png">
+          <img src="img/mentikatu2.png"class="example">
         </div>
       </label>
-      <input type="checkbox" id="pu-on">
+      <input type="checkbox" id="menti">
       <div class="pu">
-        <label for="pu-on" class="icon-close">×</label>
+        <label for="menti" class="icon-close">×</label>
         <!-- ポップアップの中身 -->
         <div class="pu-content">
           <p>メンチカツカレー</p>
           <img src="img/mentikatu2.png" style="width: 250px;">
-          <p>カレーに国産あいびきミンチを使ったにコロッケが乗っています。</p>
+          <p>ポークカレーに国産あいびきミンチを使用したメンチカツが乗っています。</p>
           <!-- ./ポップアップの中身　ここまで -->
         </div>
       </div>
@@ -188,7 +298,24 @@
   </li>
 
   <li>
-  <img src="img/karaage.png" alt="テキストテキストテキスト">
+    <div class="pu-box">
+      <label for="ka">
+        <div class="btn-open">
+          <img src="img/karaage.png"class="example">
+        </div>
+      </label>
+      <input type="checkbox" id="ka">
+      <div class="pu">
+        <label for="ka" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>からあげカレー</p>
+          <img src="img/karaage.png" style="width: 250px;">
+          <p>ポークカレーに揚げたての唐揚げを乗せています。</p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
   <h2 class="content-title">からあげカレー</h2><input type="hidden" name="name" value="からあげカレー">
   <h3>590円</h3><div class="spinner_area">
     数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
@@ -197,21 +324,72 @@
 
 <ul>
   <li>
-  <img src="img/hayasiraisu.png" alt="テキストテキストテキスト">
+    <div class="pu-box">
+      <label for="ya">
+        <div class="btn-open">
+          <img src="img/hayasiraisu.png"class="example">
+        </div>
+      </label>
+      <input type="checkbox" id="ya">
+      <div class="pu">
+        <label for="ya" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>ハヤシライス</p>
+          <img src="img/hayasiraisu.png" style="width: 250px;">
+          <p>トマトベースでしっかり煮込んだハヤシライス。</p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
   <h2 class="content-title">ハヤシライス</h2><input type="hidden" name="name" value="ハヤシライス">
   <h3>620円</h3><div class="spinner_area">
     数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
   </li>
 
   <li>
-    <img src="img/yasai.png" alt="テキストテキストテキスト">
+    <div class="pu-box">
+      <label for="yasai">
+        <div class="btn-open">
+          <img src="img/yasai.png"class="example">
+        </div>
+      </label>
+      <input type="checkbox" id="yasai">
+      <div class="pu">
+        <label for="yasai" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p>野菜カレー</p>
+          <img src="img/yasai.png" style="width: 250px;">
+          <p>ポークカレーに野菜をたくさん乗せています。。</p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
     <h2 class="content-title">野菜カレー</h2><input type="hidden" name="name" value="野菜カレー">
     <h3>660円</h3><div class="spinner_area">
       数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
     </li>
 
   <li>
-    <img src="img/mix.png" alt="テキストテキストテキスト">
+    <div class="pu-box">
+      <label for="mix">
+        <div class="btn-open">
+          <img src="img/mix.png"class="example">
+        </div>
+      </label>
+      <input type="checkbox" id="mix">
+      <div class="pu">
+        <label for="mix" class="icon-close">×</label>
+        <!-- ポップアップの中身 -->
+        <div class="pu-content">
+          <p> ミックスカレー</p>
+          <img src="img/mix.png" style="width: 250px;">
+          <p>ポークカレーにウインナー、ハンバーグ、温泉卵を乗せています。</p>
+          <!-- ./ポップアップの中身　ここまで -->
+        </div>
+      </div>
+    </div>
     <h2 class="content-title">ミックスカレー</h2><input type="hidden" name="name" value="ミックスカレー">
     <h3>800円</h3><div class="spinner_area">
       数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
@@ -228,7 +406,7 @@
 <h2 class="section-title" id="dori">ドリンク</h2>
 <ul>
   <li>
-  <img src="img/u-ron.png" alt="テキストテキストテキスト">
+  <img src="img/u-ron.png" alt="テキストテキストテキスト" >
   <h2 class="content-title">ウーロン茶</h2><input type="hidden" name="name" value="ウーロン茶">
   <h3>180円</h3><div class="spinner_area">
     数量：<input type="number" value="0" class="counter1" data-max="500" data-min="0">
@@ -276,7 +454,7 @@
 </div>
 
 
-  <div class="btn" style="margin-top:20px;  margin-bottom: 10%;    font-size: 2rem;   transform: scale(1.5)">
+<p class="btn" style="margin-bottom: 10%;    font-size: 1rem;   transform: scale(1.5)">
   <span><a href="shiharai.html"><input type="submit" value="お会計にすすむ" id="subm" /></a></span>
   </div>
 
