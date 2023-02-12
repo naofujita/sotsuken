@@ -363,7 +363,7 @@ nav{
     border-radius:2px;
     position:relative;
     display:inline-block;
-    background:rgba(255,255,255,.1);
+    background:rgba(255, 255, 255, 0);
   }
   .login-form .group label .icon:before,
   .login-form .group label .icon:after{
@@ -407,7 +407,7 @@ nav{
   .hr{
     height:2px;
     margin:60px 0 50px 0;
-    background:rgba(255,255,255,.2);
+    background:rgba(255, 255, 255, 0);
   }
   .foot-lnk{
     text-align:center;

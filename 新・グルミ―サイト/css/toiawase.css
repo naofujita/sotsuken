@@ -608,7 +608,14 @@ h5 span::after {
 	  padding: 3% 0 0 3%;
 	}
   }
-  
+  .error-message {
+	font-size: 12px;
+	color: #ff7676;
+	display: none;
+  }
+  input:invalidn + .error-message{
+	display: block;
+  }
   .box_check {
 	text-align: center;
 	margin: 1em auto;
